@@ -73,9 +73,9 @@ from utils.utils import (
 )
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
-DEFAULT_MODEL_DIR    = Path("./ck/SIDA-7B")
-DEFAULT_SAVE_HEAD    = Path("./ck/cls_head_new.pth")
-DEFAULT_FEATURES     = Path("./features_new/extracted_features.pt")
+DEFAULT_MODEL_DIR    = Path("../ck/SIDA-7B")
+DEFAULT_SAVE_HEAD    = Path("../ck/cls_head_new.pth")
+DEFAULT_FEATURES     = Path("../features_new/extracted_features.pt")
 DEFAULT_TRAIN_DIR    = Path("../photo/train")
 DEFAULT_TEST_DIR     = Path("../photo/test")
 

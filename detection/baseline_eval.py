@@ -47,9 +47,9 @@ from utils.utils import (
     IMAGE_TOKEN_INDEX,
 )
 
-DEFAULT_MODEL_DIR  = Path("./ck/SIDA-7B")
+DEFAULT_MODEL_DIR  = Path("../ck/SIDA-7B")
 DEFAULT_TEST_DIR   = Path("../photo/test")
-DEFAULT_OUTPUT_DIR = Path("./results")
+DEFAULT_OUTPUT_DIR = Path("../results")
 
 # Maps folder name → true class label (used for file organisation only)
 CLASS_MAP = {"full_synt": "FAKE", "tempered": "TAMPERED", "real": "REAL"}

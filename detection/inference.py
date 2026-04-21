@@ -56,10 +56,10 @@ from utils.utils import (
 )
 
 # ── Defaults ──────────────────────────────────────────────────────────────────
-DEFAULT_MODEL_DIR  = Path("./ck/SIDA-7B")
-DEFAULT_HEAD_PATH  = Path("./ck/cls_head_new.pth")
+DEFAULT_MODEL_DIR  = Path("../ck/SIDA-7B")
+DEFAULT_HEAD_PATH  = Path("../ck/cls_head_new.pth")
 DEFAULT_TEST_DIR   = Path("../photo/test")
-DEFAULT_OUTPUT_DIR = Path("./results_final")
+DEFAULT_OUTPUT_DIR = Path("../results_final")
 
 FOLDER_TO_LABEL = {"real": 0, "full_synt": 1, "tempered": 2}
 LABEL_NAMES     = ["real", "fake", "tampered"]

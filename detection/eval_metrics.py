@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 
 
-DEFAULT_RESULTS = Path("./results_final/results.json")
+DEFAULT_RESULTS = Path("../results_final/results.json")
 LABEL_NAMES     = ["real", "fake", "tampered"]
 
 
