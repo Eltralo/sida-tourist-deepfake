@@ -1,0 +1,22 @@
+name: sida_modern
+channels:
+  - defaults
+dependencies:
+  - python=3.10.19
+  - pip=26.0.1
+  - pip:
+      - accelerate==1.13.0
+      - bitsandbytes==0.41.1
+      - deepspeed==0.18.8
+      - einops==0.4.1
+      - fastapi==0.100.1
+      - opencv-python-headless>=4.8.0
+      - Pillow>=10.0.0
+      - requests>=2.31.0
+      - numpy>=1.24.0
+      - tqdm>=4.65.0
+      - transformers==4.38.2
+      - torch>=2.0.0
+      - torchvision>=0.15.0
+      # Web app (planned):
+      # - streamlit>=1.28.0

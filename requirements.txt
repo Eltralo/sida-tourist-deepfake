@@ -1,0 +1,26 @@
+# Core deep learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Hugging Face ecosystem
+transformers==4.38.2
+accelerate==1.13.0
+bitsandbytes==0.41.1
+
+# SIDA model dependencies
+einops==0.4.1
+deepspeed==0.18.8
+
+# Image processing
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+
+# API & HTTP
+requests>=2.31.0
+
+# Utilities
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Web app (Streamlit — planned, not yet implemented)
+# streamlit>=1.28.0
