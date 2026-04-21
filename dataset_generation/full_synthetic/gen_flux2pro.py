@@ -19,23 +19,24 @@ Usage
 Notes
 ─────
 - The script generates one test image first and asks for confirmation
-  before running the full batch.  This lets you verify quality and cost.
+  before running the full batch.
 - Progress is saved incrementally to a JSON log so the run can be
   resumed after interruption.
 - API key must be provided via the RUGPT_API_KEY environment variable.
-  Never hard-code credentials in source files.
 """
 
 import argparse
 import json
 import logging
-import os
 import random
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
 
-import requests
+# Allow imports from the parent package (dataset_generation/)
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from _api_client import get_api_key, submit_text2img, poll_result, download_image
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -45,18 +46,13 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── API ───────────────────────────────────────────────────────────────────────
-API_BASE = "https://api.rugpt.io/api/private/b2b"
-
 # ── Generation defaults ───────────────────────────────────────────────────────
 MODEL         = "flux-2/pro"
 ASPECT_RATIO  = "3:2"
 RESOLUTION    = "2K"
 ENHANCE_PROMPT = False
-POLL_INTERVAL  = 15          # seconds between status polls
-POLL_MAX_TRIES = 180         # give up after ~45 min
 DEFAULT_SEED   = 2025
-DEFAULT_N      = 152         # total images produced for the thesis
+DEFAULT_N      = 152
 DEFAULT_OUTPUT = Path(__file__).parent.parent.parent / "dataset" / "full_synthetic" / "flux2pro"
 
 # ── Prompt components ─────────────────────────────────────────────────────────
@@ -275,6 +271,7 @@ COMPOSITIONS = [
 
 def build_prompt(landmark: dict, person: dict, season: dict, tod: dict,
                  realism: str, composition: str) -> str:
+    """Assemble the full generation prompt from individual components."""
     return (
         "Documentary photograph, shot on Canon EOS R5 with Canon RF 35mm f/1.8 IS STM lens. "
         "ISO 400, f/5.6, 1/250s. Slightly underexposed by -0.3 EV. "
@@ -299,88 +296,8 @@ def build_prompt(landmark: dict, person: dict, season: dict, tod: dict,
     )
 
 
-# ── API helpers ───────────────────────────────────────────────────────────────
-
-def _get_api_key() -> str:
-    key = os.environ.get("RUGPT_API_KEY", "")
-    if not key:
-        raise EnvironmentError(
-            "RUGPT_API_KEY environment variable is not set.\n"
-            "Run:  export RUGPT_API_KEY='your_key_here'"
-        )
-    return key
-
-
-def submit_generation(prompt: str, api_key: str, max_retries: int = 5):
-    url = f"{API_BASE}/image/generation"
-    headers = {"x-rugpt-key": api_key, "Content-Type": "application/json"}
-    payload = {
-        "model": MODEL,
-        "prompt": prompt,
-        "params": {
-            "aspectRatio": ASPECT_RATIO,
-            "attachedFiles": [],
-            "enhancePrompt": ENHANCE_PROMPT,
-            "resolution": RESOLUTION,
-        },
-    }
-    for attempt in range(max_retries):
-        try:
-            resp = requests.post(url, headers=headers, json=payload, timeout=60)
-            if resp.status_code in (502, 503, 504):
-                wait = (attempt + 1) * 10
-                log.warning("HTTP %d, retry %d/%d in %ds...", resp.status_code, attempt + 1, max_retries, wait)
-                time.sleep(wait)
-                continue
-            if resp.status_code not in (200, 201):
-                log.error("Submit failed: HTTP %d — %s", resp.status_code, resp.text[:300])
-                return None, None
-            data = resp.json()["data"]
-            return data["uuid"], data["status"]
-        except requests.exceptions.Timeout:
-            wait = (attempt + 1) * 10
-            log.warning("Timeout, retry %d/%d in %ds...", attempt + 1, max_retries, wait)
-            time.sleep(wait)
-        except Exception as exc:
-            log.error("Submit error: %s", exc)
-            time.sleep(10)
-    return None, None
-
-
-def poll_result(job_uuid: str, api_key: str) -> dict:
-    url = f"{API_BASE}/image/generation/jobs/{job_uuid}"
-    headers = {"x-rugpt-key": api_key}
-    for attempt in range(POLL_MAX_TRIES):
-        try:
-            resp = requests.get(url, headers=headers, timeout=30)
-            if resp.status_code != 200:
-                time.sleep(POLL_INTERVAL)
-                continue
-            data = resp.json()["data"]
-            status = data["status"]
-            if status == "completed":
-                return {"urls": data.get("urls"), "price": data.get("price"), "status": "completed"}
-            if status == "failed":
-                return {"urls": None, "price": data.get("price"), "status": "failed",
-                        "error": data.get("error")}
-            wait = POLL_INTERVAL if attempt < 5 else min(POLL_INTERVAL * 2, 30)
-            if attempt % 4 == 0:
-                log.info("  status=%s (attempt %d, ~%ds elapsed)", status, attempt, attempt * POLL_INTERVAL)
-            time.sleep(wait)
-        except Exception as exc:
-            log.warning("Poll error: %s", exc)
-            time.sleep(POLL_INTERVAL)
-    return {"urls": None, "status": "timeout"}
-
-
-def download_image(img_url: str, filepath: Path) -> int:
-    resp = requests.get(img_url, timeout=120)
-    resp.raise_for_status()
-    filepath.write_bytes(resp.content)
-    return len(resp.content)
-
-
 def save_log(combos: list, log_path: Path) -> None:
+    """Write generation progress to a JSON log file."""
     data = {
         "metadata": {
             "model": MODEL,
@@ -397,7 +314,7 @@ def save_log(combos: list, log_path: Path) -> None:
     log.info("Log saved → %s", log_path)
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# ── CLI ───────────────────────────────────────────────────────────────────────
 
 def parse_args():
     p = argparse.ArgumentParser(description="Generate fully synthetic tourist photos via Flux 2 Pro.")
@@ -410,7 +327,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    api_key = _get_api_key()
+    api_key = get_api_key()
     args.output.mkdir(parents=True, exist_ok=True)
     log_path = args.output / "generation_log.json"
 
@@ -446,7 +363,11 @@ def main():
     log.info("-" * 60)
     log.info("TEST: Generating first image to verify quality and price...")
     test = combos[0]
-    job_uuid, _ = submit_generation(test["prompt"], api_key)
+    job_uuid, _ = submit_text2img(
+        test["prompt"], api_key, model=MODEL,
+        aspect_ratio=ASPECT_RATIO, resolution=RESOLUTION,
+        enhance_prompt=ENHANCE_PROMPT,
+    )
     if not job_uuid:
         log.error("Cannot submit test job. Exiting.")
         return
@@ -484,7 +405,11 @@ def main():
         log.info("[%3d/%d]  %s | %s | %s | %s",
                  idx + 1, args.num, combo["landmark"], combo["person"], combo["season"], combo["time"])
 
-        job_uuid, _ = submit_generation(combo["prompt"], api_key)
+        job_uuid, _ = submit_text2img(
+            combo["prompt"], api_key, model=MODEL,
+            aspect_ratio=ASPECT_RATIO, resolution=RESOLUTION,
+            enhance_prompt=ENHANCE_PROMPT,
+        )
         if not job_uuid:
             combo["status"] = "submit_failed"
             continue
