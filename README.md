@@ -1,6 +1,6 @@
 # SIDA-7B Fine-Tuning for Tourist Deepfake Detection
 
-**Master's thesis project** · Eltara · 2026
+
 
 Detection and localisation of synthetic tourist photographs in Russian social media
 using a domain-adapted **SIDA-7B** multimodal model.
