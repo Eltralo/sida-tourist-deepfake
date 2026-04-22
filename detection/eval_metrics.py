@@ -2,17 +2,17 @@
 """
 detection/eval_metrics.py
 ──────────────────────────
-Computes and prints evaluation metrics from a results.json file
-produced by inference.py or baseline_eval.py.
+Вычисление и вывод метрик качества на основе файла results.json,
+сформированного скриптами inference.py или baseline_eval.py.
 
-Metrics reported:
-    - Overall accuracy
-    - Per-class accuracy
-    - Confusion matrix
-    - Precision, Recall, F1 (per class and macro-averaged)
+Рассчитываемые метрики:
+    - Общая точность (Overall Accuracy)
+    - Точность по классам
+    - Матрица ошибок (Confusion Matrix)
+    - Precision, Recall, F1-score (по классам и усреднённые)
 
-Usage
-─────
+Использование
+─────────────
     python eval_metrics.py
     python eval_metrics.py --results ../results_final/results.json
     python eval_metrics.py --results ../results/baseline_results.json
