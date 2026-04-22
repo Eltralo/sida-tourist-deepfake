@@ -78,34 +78,34 @@
 ```
 sida-tourist-deepfake/
 │
-├── dataset_generation/          # Dataset construction pipeline
-│   ├── _api_client.py           # Shared ruGPT.io API helpers
-│   ├── split_dataset.py         # Train/test split (seed=42, 1000/300)
+├── dataset_generation/          # Создание датасета
+│   ├── _api_client.py           # ruGPT.io API 
+│   ├── split_dataset.py         # Разделение на тренировочный и валидационный набор данных (seed=42, 999/300)
 │   ├── full_synthetic/
-│   │   ├── gen_flux2pro.py      # Flux 2 Pro  — 152 images
-│   │   ├── gen_seedream45.py    # Seedream 4.5 — 123 images
-│   │   ├── gen_zimage.py        # Z-Image      — 122 images
-│   │   └── gen_imagen4.py       # Imagen 4     —  31 images
+│   │   ├── gen_flux2pro.py      # Flux 2 Pro  — 152 изображений
+│   │   ├── gen_seedream45.py    # Seedream 4.5 — 123 изображений
+│   │   ├── gen_zimage.py        # Z-Image      — 122 изображений
+│   │   └── gen_imagen4.py       # Imagen 4     —  31 изображений
 │   └── tempered/
-│       ├── gen_nano_banana.py   # Nano Banana (background replacement) — 241 images
-│       └── gen_flux2pro_edit.py # Flux 2 Pro edit (background replacement) — 192 images
+│       ├── gen_nano_banana.py   # Nano Banana (замена фона) — 241 изображений
+│       └── gen_flux2pro_edit.py # Flux 2 Pro edit (background replacement) — 192 изображения
 │
 ├── detection/
-│   ├── finetune.py              # Two-phase fine-tuning (Phase 1: features, Phase 2: head)
-│   ├── inference.py             # Inference with SAM mask generation
-│   ├── baseline_eval.py         # Baseline evaluation (unmodified SIDA-7B)
-│   └── eval_metrics.py          # Metrics: accuracy, Macro F1, confusion matrix
+│   ├── finetune.py              # Двухэтапный файнтюн (Этап 1: features, Этап 2: head)
+│   ├── inference.py             # Инференс SAM mask generation
+│   ├── baseline_eval.py         # Базовое сравнение (базовая модель SIDA-7B)
+│   └── eval_metrics.py          # Метрики: accuracy, Macro F1, confusion matrix
 │
 ├── ck/
 │   ├── cls_head_new.pth         # Fine-tuned classification head weights (33 MB)
 │   ├── sam_vit_h_4b8939.pth     # SAM ViT-H checkpoint (30 MB)
 │   └── SIDA-7B/                 #  Download separately (see Setup)
 │
-├── model/                       # SIDA model architecture (original authors)
-├── utils/                       # Utility functions (original authors)
+├── model/                       # авторская архитектура SIDA
+├── utils/                       # функции от авторов модели SIDA
 │
-├── environment.yml              # Conda environment (Python 3.10, CUDA 12.6)
-├── requirements.txt             # pip dependencies
+├── environment.yml              # Conda среда (Python 3.10, CUDA 12.6)
+├── requirements.txt             # pip зависимости
 └── .gitignore
 ```
 
@@ -115,7 +115,7 @@ sida-tourist-deepfake/
 
 ## Установка и использование
 
-### 1. Скопируйте репозиторий и создаюте виртуальную среду
+### 1. Копия репозитория и создание виртуальной среды
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/sida-tourist-deepfake.git
@@ -132,9 +132,9 @@ pip install huggingface_hub
 huggingface-cli download Peterande/SIDA-7B --local-dir ck/SIDA-7B
 ```
 
-### 3. Требования по железу
+### 3. Требования по характеристикам оборудования
 
-| Component | Minimum | Used in this work |
+| Компонет | Минимально | Использовано в данной работе |
 |-----------|---------|-------------------|
 | GPU | 24 GB VRAM | NVIDIA RTX 5090 (32 GB) |
 | RAM | 32 GB | 64 GB |
