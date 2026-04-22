@@ -2,14 +2,15 @@
 """
 detection/baseline_eval.py
 ───────────────────────────
-Evaluates the **unmodified** SIDA-7B model (no fine-tuning) on the
-tourist deepfake dataset.  Parses text output to determine class.
+Оценка производительности базовой модели SIDA-7B (без дообучения) на датасете
+туристических изображений с применением методов глубокого обучения для детекции
+синтетического контента.
 
-This script produces the baseline numbers reported in the thesis:
-    Overall Accuracy : 44.0%
-    Macro F1         : 0.363
-
-Usage
+Данный скрипт формирует базовые метрики, представленные в выпускной квалификационной работе:
+    Общая точность (Overall Accuracy) : 44.0%
+    Макро F1-мера (Macro F1)          : 0.363
+    
+Использование
 ─────
     conda activate sida_modern
     cd detection/
