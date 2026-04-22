@@ -2,13 +2,13 @@
 """
 dataset_generation/full_synthetic/gen_flux2pro.py
 ──────────────────────────────────────────────────
-Generates fully synthetic tourist photographs via the ruGPT.io API.
-Model  : flux-2/pro  (Black Forest Labs, rectified-flow DiT, 32B parameters)
-Domain : Moscow & Saint Petersburg landmarks, diverse Russian pedestrians
-Output : dataset/full_synthetic/flux2pro/
-Total generated for the thesis dataset: 152 images
+Генерация полностью синтетических туристических фотографий через API ruGPT.io.
+Модель  : flux-2/pro  (Black Forest Labs, диффузионная трансформерная архитектура, 32B параметров)
+Домен   : Достопримечательности Москвы и Санкт-Петербурга, различные люди
+Выход   : dataset/full_synthetic/flux2pro/
+Всего сгенерировано для датасета ВКР: 152 изображения
 
-Usage
+Использование
 ─────
     export RUGPT_API_KEY="your_key_here"
     python gen_flux2pro.py
@@ -18,11 +18,11 @@ Usage
 
 Notes
 ─────
-- The script generates one test image first and asks for confirmation
-  before running the full batch.
-- Progress is saved incrementally to a JSON log so the run can be
-  resumed after interruption.
-- API key must be provided via the RUGPT_API_KEY environment variable.
+- Скрипт сначала генерирует одно тестовое изображение и запрашивает подтверждение
+  перед запуском полного пакета генерации.
+- Прогресс сохраняется инкрементально в JSON-лог, что позволяет возобновить работу
+  после прерывания.
+- API-ключ должен быть предоставлен через переменную окружения RUGPT_API_KEY.
 """
 
 import argparse
