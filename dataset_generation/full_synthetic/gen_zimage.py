@@ -2,18 +2,18 @@
 """
 dataset_generation/full_synthetic/gen_zimage.py
 ────────────────────────────────────────────────
-Generates fully synthetic tourist photographs via the ruGPT.io API.
-Model  : z-image  (Alibaba Tongyi MAI, S³-DiT, 6B parameters, arXiv:2511.22699)
-Domain : Moscow & Saint Petersburg landmarks, diverse Russian pedestrians
-Output : dataset/full_synthetic/zimage/
-Total generated for the thesis dataset: 122 images
+Генерация полностью синтетических туристических фотографий через API ruGPT.io.
+Модель  : z-image  (Alibaba Tongyi MAI, S³-DiT, 6B параметров, arXiv:2511.22699)
+Домен   : Достопримечательности Москвы и Санкт-Петербурга, разнообразные российские пешеходы
+Выход   : dataset/full_synthetic/zimage/
+Всего сгенерировано для датасета ВКР: 122 изображения
 
-Note on prompt length
+Примечание о длине промпта
 ─────────────────────
-Z-Image accepts prompts up to 1 000 characters.
-The builder in this script stays safely within 950 characters.
+Z-Image поддерживает промпты длиной до 1 000 символов.
+Сборщик промптов в этом скрипте безопасно ограничивает длину на уровне 950 символов.
 
-Usage
+Использование
 ─────
     export RUGPT_API_KEY="your_key_here"
     python gen_zimage.py
