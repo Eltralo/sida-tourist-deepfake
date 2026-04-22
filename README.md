@@ -181,7 +181,6 @@ python split_dataset.py
 #         photo/test/ {real,full_synt,tempered}/
 ```
 
----
 
 ## Дообучение
 
