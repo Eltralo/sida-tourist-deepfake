@@ -4,19 +4,19 @@ detection/inference.py
 ───────────────────────
 Full inference pipeline for the fine-tuned SIDA-7B model.
 
-For each test image:
-    1. Extracts [CLS] hidden-state vector and classifies via cls_head
+Для каждого тестового изображения выполняется:
+    1. Извлечение вектора скрытого состояния [CLS] и классификация через cls_head
        → REAL (0) / FAKE (1) / TAMPERED (2)
-    2. For images predicted as TAMPERED: generates a binary segmentation
-       mask via the SAM decoder and saves a visual overlay.
+    2. Для изображений, предсказанных как TAMPERED: генерация бинарной маски
+       сегментации через декодер SAM и сохранение визуализации.
 
-Output (--output-dir):
-    report.txt     — human-readable per-class and per-tool breakdown
-    results.json   — per-image predictions, probabilities, mask coverage
-    masks/         — binary PNG masks for TAMPERED predictions
-    overlays/      — original + red-channel overlay with coverage label
+Выходные файлы (--output-dir):
+    report.txt     — человекочитаемый отчёт с разбивкой по классам и инструментам
+    results.json   — предсказания, вероятности и покрытие масок для каждого изображения
+    masks/         — бинарные PNG-маски для предсказаний класса TAMPERED
+    overlays/      — исходное изображение + наложение красным каналом с меткой покрытия
 
-Usage
+Использование
 ─────
     conda activate sida_modern
     cd detection/
