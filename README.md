@@ -1,29 +1,67 @@
-# SIDA-7B Fine-Tuning for Tourist Deepfake Detection
+# Система проверки пользовательских фотографий в туристических сервисах с применением методов глубокого машинного обучения
+
+## Оглавление  
+
+[1. Описание проекта](.README.md#Описание-проекта)  
+[2. Формализация задачи ](.README.md#Какой-кейс-решаем)  
+[3. Краткая информация о данных](.README.md#Краткая-информация-о-данных)  
+[4. Этапы работы над проектом](.README.md#Результат) 
+[4. Результаты](.README.md#Результат)    
+[5. Структура репозитория](.README.md#Результат) 
+[6. Установка и использование](.README.md#Выводы) 
+
+### Описание проекта  
+
+Данный проект выполнен в рамках магистерской диссертации НИЯУ МИФИ и представляет собой реализацию проекта проверки пользовательских фотографий в туристических сервисах с применением дообучения предобученной мультимодальной модели SIDA-7B. 
 
 
+## Формализация задачи
 
-Detection and localisation of synthetic tourist photographs in Russian social media
-using a domain-adapted **SIDA-7B** multimodal model.
+В связи с взрывным развитием генеративных моделей возникает потребность в детекции синтетических и частично - синтетических изображений в контексте туристического домена
 
----
+## Краткая информация о данных 
 
-## Problem statement
+Датасет для дообучения модели формировался из личного архива автора.
+Синтетические и частично - синтетические изображения получены посредством API - доступа ([ruGPT.io](https://rugpt.io)).Список использованных моделей приведен в таблице.
 
-Tourist photographs on Russian social media platforms (ВКонтакте, Telegram)
-are increasingly fabricated using generative AI:
+### Набор данных полностью синтетических изображений
 
-| Class | Description | Count |
+| Модель | Компания | Архитектура | Количество изображений |
+|-------|-----------|-------------|--------|
+| Flux 2 Pro | Black Forest Labs | Rectified-flow DiT, 32B | 152 |
+| Seedream 4.5 | ByteDance | Scalable DiT | 123 |
+| Z-Image | Alibaba Tongyi MAI | S³-DiT, 6B  | 122 |
+| Imagen 4 | Google DeepMind | Cascaded latent diffusion | 31 |
+
+### Частично - синтетические  изображения с заменой фона
+
+| Модель | Компания | Метод | Количество изображений |
+|-------|-----------|--------|--------|
+| Nano Banana | Google DeepMind | img2img (Gemini 2.5 Flash Image) | 241 |
+| Flux 2 Pro edit | Black Forest Labs | img2img, 2K resolution | 192 |
+
+### Итоговый набор данных
+
+| Класс | Характеристика | Изображение|
 |-------|-------------|-------|
-| **real** | Authentic personal archive photographs (2016–2026) | 438 |
-| **full_synt** | Fully AI-generated tourist scenes (4 models) | 428 |
-| **tempered** | Real person + AI-generated Russian landmark background | 433 |
-| **Total** | | **1 299** |
+| **подлинные фотографии** | Личный архив автора | 438 |
+| **полностью синтетические изображения** | Синтетические фотографии туристических сцен | 428 |
+| **частично-синтетические изображения** | Реальный человек и замена фона с достопримечательностью | 433 |
+| **Всего** | | **1 299** |
 
 ---
+## Этапы работы над проектом
 
-## Results
+1.Исследовательский анализ
+2.Сбор и генерация изображений для формирования датасета
+3.Тестирование базовой модели SIDA - 7B
+4.Дообучение модели на целевом домене
+5.Реализация программного интерфейса Streamlit
+6.Анализ результатов
 
-| Metric | Baseline SIDA-7B | Fine-tuned (this work) |
+## Результаты
+
+| Метрика | Базовая SIDA-7B | Дообученная SIDA - 7B |
 |--------|-----------------|------------------------|
 | Overall Accuracy | 44.0% | **94.67%** |
 | Macro F1 | 0.363 | **0.946** |
@@ -31,11 +69,11 @@ are increasingly fabricated using generative AI:
 | FAKE accuracy | 5% | **100%** |
 | TAMPERED accuracy | 5% | 90% |
 
-Best epoch: **11** · Early stopping at epoch 18 · Seed: 42
+Лучшая эпоха: **11** · Ранняя остановка на 18 эпохе · Seed: 42
 
 ---
 
-## Repository structure
+## Структура репозитория
 
 ```
 sida-tourist-deepfake/
@@ -59,9 +97,9 @@ sida-tourist-deepfake/
 │   └── eval_metrics.py          # Metrics: accuracy, Macro F1, confusion matrix
 │
 ├── ck/
-│   ├── cls_head_new.pth         # ✅ Fine-tuned classification head weights (33 MB)
+│   ├── cls_head_new.pth         # Fine-tuned classification head weights (33 MB)
 │   ├── sam_vit_h_4b8939.pth     # SAM ViT-H checkpoint (30 MB)
-│   └── SIDA-7B/                 # ⬇️  Download separately (see Setup)
+│   └── SIDA-7B/                 #  Download separately (see Setup)
 │
 ├── model/                       # SIDA model architecture (original authors)
 ├── utils/                       # Utility functions (original authors)
@@ -71,14 +109,13 @@ sida-tourist-deepfake/
 └── .gitignore
 ```
 
-> **Streamlit demo** — planned, not yet implemented.
-> Will be added in `streamlit_app/` in a future release.
+> **Streamlit demo** — будет добавлено
 
 ---
 
-## Setup
+## Установка и использование
 
-### 1. Clone and create environment
+### 1. Скопируйте репозиторий и создаюте виртуальную среду
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/sida-tourist-deepfake.git
@@ -88,14 +125,14 @@ conda env create -f environment.yml
 conda activate sida_modern
 ```
 
-### 2. Download base model
+### 2. Загрузка базовой модели
 
 ```bash
 pip install huggingface_hub
 huggingface-cli download Peterande/SIDA-7B --local-dir ck/SIDA-7B
 ```
 
-### 3. Hardware requirements
+### 3. Требования по железу
 
 | Component | Minimum | Used in this work |
 |-----------|---------|-------------------|
@@ -105,7 +142,7 @@ huggingface-cli download Peterande/SIDA-7B --local-dir ck/SIDA-7B
 
 ---
 
-## Reproducing the dataset
+## Создание датасета
 
 All generation scripts require a `RUGPT_API_KEY` environment variable
 (your ruGPT.io API key). **Never hard-code API keys in source files.**
@@ -114,7 +151,7 @@ All generation scripts require a `RUGPT_API_KEY` environment variable
 export RUGPT_API_KEY="your_key_here"
 ```
 
-### Fully synthetic images
+### Полностью синтетические изображения
 
 ```bash
 cd dataset_generation/full_synthetic
@@ -128,7 +165,7 @@ python gen_imagen4.py     # Imagen 4     → dataset/full_synthetic/imagen4/
 > Each script generates a test image first and asks for confirmation
 > before running the full batch.
 
-### Tempered images (background replacement)
+### Частично - синтетические изображения
 
 ```bash
 cd dataset_generation/tempered
@@ -138,7 +175,7 @@ python gen_nano_banana.py    # → dataset/tempered/nano_banana/
 python gen_flux2pro_edit.py  # → dataset/tempered/flux2pro_edit/
 ```
 
-### Train/test split
+### Разделение на тренировочную и тестовую выборки
 
 ```bash
 cd dataset_generation
@@ -149,17 +186,17 @@ python split_dataset.py
 
 ---
 
-## Fine-tuning
+## Дообучение
 
 ```bash
 cd detection
 python finetune.py
 ```
 
-**Phase 1** (run once, ~20 min): extracts and caches [CLS] feature vectors
+**Этап 1** (run once, ~20 min): extracts and caches [CLS] feature vectors
 from all images using the frozen SIDA-7B backbone.
 
-**Phase 2** (seconds per epoch): trains the classification head on cached features.
+**Этап 2** (seconds per epoch): trains the classification head on cached features.
 
 ```bash
 # Force re-extraction (skip cache):
@@ -173,7 +210,7 @@ python finetune.py \
     --save-head ../ck/cls_head_new.pth
 ```
 
-### Architecture
+### Архитектура
 
 ```
 SIDA-7B backbone (frozen, 7.35B parameters — 99.886%)
@@ -191,7 +228,7 @@ to regularise training on the small (1 000 image) dataset.
 
 ---
 
-## Inference
+## Инференс
 
 ```bash
 cd detection
@@ -214,34 +251,9 @@ Results are saved to `results_final/`:
 
 ---
 
-## Models used
 
-### Fully synthetic dataset
 
-| Model | Developer | Architecture | Images |
-|-------|-----------|-------------|--------|
-| Flux 2 Pro | Black Forest Labs | Rectified-flow DiT, 32B | 152 |
-| Seedream 4.5 | ByteDance | Scalable DiT | 123 |
-| Z-Image | Alibaba Tongyi MAI | S³-DiT, 6B ([arXiv:2511.22699](https://arxiv.org/abs/2511.22699)) | 122 |
-| Imagen 4 | Google DeepMind | Cascaded latent diffusion | 31 |
-
-### Tempered dataset (background replacement)
-
-| Model | Developer | Method | Images |
-|-------|-----------|--------|--------|
-| Nano Banana | Google DeepMind | img2img (Gemini 2.5 Flash Image) | 241 |
-| Flux 2 Pro edit | Black Forest Labs | img2img, 2K resolution | 192 |
-
-All models accessed via [ruGPT.io](https://rugpt.io) — a Russian API aggregator
-providing ruble-denominated access to international generative models.
-
-> **Note on Imagen 4**: ruGPT.io exposes Imagen 4 under the alias `"dall-e-3"`.
-> All Imagen 4 outputs carry an invisible **SynthID** watermark
-> ([arXiv:2510.09263](https://arxiv.org/abs/2510.09263)).
-
----
-
-## Citation
+## Цитирование
 
 If you use this work, please cite:
 
