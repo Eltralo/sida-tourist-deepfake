@@ -228,13 +228,13 @@ REAL / FAKE / TAMPERED
 ```bash
 cd detection
 
-# Full inference with SAM mask generation for TAMPERED predictions:
+# Инференс с генерацией масок для частично - синтетических изображений:
 python inference.py
 
-# Baseline (unmodified SIDA-7B, no fine-tuning):
+# Базовая модель ( SIDA-7B, без дообучения):
 python baseline_eval.py
 
-# Metrics only (from existing results.json):
+# Метрики ( results.json):
 python eval_metrics.py
 ```
 
