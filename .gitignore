@@ -17,7 +17,8 @@ photo/
 
 # ── Inference output ───────────────────────────────────────────────────────────
 results/
-results_final/
+results_final/masks/
+results_final/overlays/
 vis_output/
 vis_output_eval/
 

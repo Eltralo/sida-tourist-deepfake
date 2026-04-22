@@ -1,0 +1,4409 @@
+{
+  "summary": {
+    "accuracy": 94.66666666666667,
+    "correct": 284,
+    "total": 300
+  },
+  "confusion": [
+    [
+      94,
+      0,
+      6
+    ],
+    [
+      0,
+      100,
+      0
+    ],
+    [
+      4,
+      6,
+      90
+    ]
+  ],
+  "per_image": [
+    {
+      "file": "2018-01-01 16-41-51.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.4,
+        "fake": 0.0,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2018-11-04 19-30-04.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-05-01 17-28-18.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.5,
+        "fake": 0.0,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-06-15 16-45-07.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-06-15 18-04-30.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-06-17 17-15-49.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-06-17 18-39-53.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 26.4,
+        "fake": 0.2,
+        "tampered": 73.5
+      },
+      "mask_cov_%": 62.26514180501302
+    },
+    {
+      "file": "2019-07-29 18-50-35.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2019-10-26 17-19-25.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-02-14 18-37-21.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 94.4,
+        "fake": 0.0,
+        "tampered": 5.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-57-39_1602504456738.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 98.3,
+        "fake": 0.0,
+        "tampered": 1.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-57-39_1602504469616.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.6,
+        "fake": 0.0,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-57-41_1602504309372.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 50.0,
+        "fake": 1.1,
+        "tampered": 48.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-58-11_1602502232613.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-58-12_1602502109335.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.4,
+        "fake": 0.0,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2020-10-01 23-58-12_1602502125344.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2021-01-04 14-22-38.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2021-01-07 16-05-15.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2021-07-03 11-05-44.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.8,
+        "fake": 0.0,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2021-07-03 11-06-16(1).JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.0,
+        "fake": 0.0,
+        "tampered": 1.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2022-02-11 16-22-03.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2022-04-30 10-59-27.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 98.7,
+        "fake": 0.0,
+        "tampered": 1.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2022-04-30 12-36-25.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.8,
+        "fake": 0.0,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2022-05-01 22-12-01.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2023-01-04 17-51-21_1673020634087.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "2023-04-15 15-21-50.JPG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 54.6,
+        "fake": 4.0,
+        "tampered": 41.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105420.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 87.4,
+        "fake": 0.1,
+        "tampered": 12.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105507.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 10.6,
+        "fake": 0.0,
+        "tampered": 89.4
+      },
+      "mask_cov_%": 8.292589882943144
+    },
+    {
+      "file": "IMG_20260220_105511.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 10.2,
+        "fake": 0.2,
+        "tampered": 89.6
+      },
+      "mask_cov_%": 12.746149042464614
+    },
+    {
+      "file": "IMG_20260220_105546.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105607.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.2,
+        "fake": 0.0,
+        "tampered": 0.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105610.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 98.6,
+        "fake": 0.0,
+        "tampered": 1.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105616.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.7,
+        "fake": 0.0,
+        "tampered": 0.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105631.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 4.9,
+        "fake": 3.5,
+        "tampered": 91.5
+      },
+      "mask_cov_%": 12.333229166666666
+    },
+    {
+      "file": "IMG_20260220_105640.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105646.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105649.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.6,
+        "fake": 0.0,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105654.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105700.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.6,
+        "fake": 0.0,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105706.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105716.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105719.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105742.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 90.5,
+        "fake": 0.0,
+        "tampered": 9.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105808.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105817.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105821.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_105823.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_110111.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260220_110139.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 34.5,
+        "fake": 0.0,
+        "tampered": 65.5
+      },
+      "mask_cov_%": 2.0754437869822486
+    },
+    {
+      "file": "IMG_20260323_192225.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192247.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.6,
+        "fake": 0.0,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192258.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192317.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192335.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 97.7,
+        "fake": 0.0,
+        "tampered": 2.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192352.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192402.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192410.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 63.6,
+        "fake": 0.1,
+        "tampered": 36.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192427.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.8,
+        "fake": 0.0,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192450.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192508.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.7,
+        "fake": 0.0,
+        "tampered": 0.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192528.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192534.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192604.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.8,
+        "fake": 0.0,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192653.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192659.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192719.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 96.5,
+        "fake": 0.1,
+        "tampered": 3.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192731.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.3,
+        "fake": 0.0,
+        "tampered": 0.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192753.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192810.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.5,
+        "fake": 0.0,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192835.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.8,
+        "fake": 0.0,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192849.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192910.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.4,
+        "fake": 0.1,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192916.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 97.9,
+        "fake": 0.0,
+        "tampered": 2.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192919.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_192936.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193017.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.9,
+        "fake": 0.0,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193030.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193033.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193115.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.1,
+        "fake": 0.3,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193118.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 98.3,
+        "fake": 0.0,
+        "tampered": 1.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193122.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "tampered",
+      "correct": false,
+      "probs": {
+        "real": 14.7,
+        "fake": 0.1,
+        "tampered": 85.1
+      },
+      "mask_cov_%": 25.5371065249114
+    },
+    {
+      "file": "IMG_20260323_193144.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.5,
+        "fake": 0.0,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193245.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 89.0,
+        "fake": 0.0,
+        "tampered": 11.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193313.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.7,
+        "fake": 0.0,
+        "tampered": 0.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193338.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 78.3,
+        "fake": 16.7,
+        "tampered": 5.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193341.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.5,
+        "fake": 0.0,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193347.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193357.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193414.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_193740.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_201244.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_201306.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 98.4,
+        "fake": 0.0,
+        "tampered": 1.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_201320.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_202504.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 95.8,
+        "fake": 0.0,
+        "tampered": 4.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_202508.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_20260323_202551.png",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.3,
+        "fake": 0.0,
+        "tampered": 0.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_4590.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "IMG_8120.JPEG",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 100.0,
+        "fake": 0.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "photo_2026-02-05_18-45-44.jpg",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 99.5,
+        "fake": 0.0,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "photo_2026-02-13_18-42-42.jpg",
+      "folder": "real",
+      "true": "real",
+      "pred": "real",
+      "correct": true,
+      "probs": {
+        "real": 67.9,
+        "fake": 0.0,
+        "tampered": 32.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_000_autumn_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_002_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_003_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.0,
+        "tampered": 1.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_011_summer_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_016_spring_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_026_summer_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.7,
+        "tampered": 0.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_028_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.8,
+        "fake": 98.7,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_032_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 90.9,
+        "tampered": 9.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_033_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_036_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_041_winter_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.8,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_043_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.8,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_045_winter_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 1.8,
+        "fake": 58.2,
+        "tampered": 40.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_046_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.4,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_051_spring_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_052_autumn_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_057_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_064_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.6,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_065_spring_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_068_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_078_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.5,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_07_summer_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.2,
+        "tampered": 0.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_086_spring_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.8,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_08_summer_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.5,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_091_spring_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_09_spring_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.3,
+        "tampered": 0.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_11_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 98.5,
+        "tampered": 1.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_16_autumn_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 93.2,
+        "tampered": 6.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_18_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_22_winter_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_29_winter_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 96.6,
+        "tampered": 3.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_33_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_34_spring_overcast_day.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.1,
+        "tampered": 0.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_36_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_41_spring_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.1,
+        "tampered": 0.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_45_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 9.3,
+        "fake": 68.8,
+        "tampered": 21.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_001.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 73.1,
+        "tampered": 26.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_011.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 2.8,
+        "fake": 59.5,
+        "tampered": 37.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_015.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 89.6,
+        "tampered": 10.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_018.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 92.7,
+        "tampered": 7.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_020.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 96.6,
+        "tampered": 3.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_021.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 57.4,
+        "tampered": 42.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "imagen4_024.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 96.9,
+        "tampered": 3.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_000_winter_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_002_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_006_spring_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.2,
+        "tampered": 0.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_007_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.2,
+        "tampered": 0.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_009_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_009_winter_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_010_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_010_spring_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 98.7,
+        "tampered": 1.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_012_autumn_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.6,
+        "tampered": 0.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_012_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_016_winter_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_019_summer_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_019_summer_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.1,
+        "tampered": 0.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_021_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_022_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.5,
+        "tampered": 0.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_026_summer_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_029_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 96.8,
+        "tampered": 3.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_030_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_031_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_032_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_037_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_040_autumn_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.3,
+        "tampered": 0.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_041_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_052_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_054_autumn_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_054_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 93.0,
+        "tampered": 7.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_055_autumn_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_059_winter_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "seedream_061_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_000_winter_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.1,
+        "tampered": 0.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_001_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_001_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_005_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_006_autumn_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.8,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_007_autumn_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_009_autumn_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_011_autumn_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_013_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_022_summer_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_023_spring_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_023_winter_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_024_spring_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.7,
+        "tampered": 0.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_024_summer_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.8,
+        "tampered": 0.2
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_025_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 96.6,
+        "tampered": 3.4
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_025_winter_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_028_autumn_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_028_summer_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.9,
+        "tampered": 0.1
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_035_spring_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_036_winter_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_042_autumn_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_042_winter_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_045_autumn_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_050_summer_golden_hour.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_051_winter_evening_blue.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 99.4,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_059_autumn_overcast.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_060_winter_early_morning.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "zimage_066_autumn_midday.png",
+      "folder": "full_synt",
+      "true": "fake",
+      "pred": "fake",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 100.0,
+        "tampered": 0.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_02_Izmailovsky_Kremlin_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.4,
+        "fake": 0.1,
+        "tampered": 99.6
+      },
+      "mask_cov_%": 5.442142486572266
+    },
+    {
+      "file": "banana_04_GUM_Red_Square_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.2,
+        "fake": 0.1,
+        "tampered": 99.7
+      },
+      "mask_cov_%": 5.411720275878906
+    },
+    {
+      "file": "banana_05_Red_Square_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.2,
+        "fake": 0.0,
+        "tampered": 99.8
+      },
+      "mask_cov_%": 9.280967712402344
+    },
+    {
+      "file": "banana_09_Novodevichy_Convent_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 2.6763916015625
+    },
+    {
+      "file": "banana_10_Kazan_Cathedral_SPb.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 47.7,
+        "tampered": 52.3
+      },
+      "mask_cov_%": 3.079509735107422
+    },
+    {
+      "file": "banana_12_MSU_Sparrow_Hills.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 64.4,
+        "tampered": 35.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_22_Novodevichy_Convent_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.1,
+        "tampered": 99.8
+      },
+      "mask_cov_%": 5.658912658691406
+    },
+    {
+      "file": "banana_28_Zaryadye_Park_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 2.2,
+        "tampered": 97.8
+      },
+      "mask_cov_%": 6.2870025634765625
+    },
+    {
+      "file": "banana_31_Nevsky_Prospect_SPb.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.4,
+        "fake": 1.6,
+        "tampered": 98.0
+      },
+      "mask_cov_%": 3.0652999877929688
+    },
+    {
+      "file": "banana_33_Peterhof_SPb.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 8.4,
+        "fake": 0.0,
+        "tampered": 91.5
+      },
+      "mask_cov_%": 3.6336898803710938
+    },
+    {
+      "file": "banana_45_Kolomenskoye_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 1.2,
+        "fake": 23.0,
+        "tampered": 75.9
+      },
+      "mask_cov_%": 7.725429534912109
+    },
+    {
+      "file": "banana_47_Izmailovsky_Kremlin_Moscow.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 14.2,
+        "fake": 0.0,
+        "tampered": 85.7
+      },
+      "mask_cov_%": 15.634346008300781
+    },
+    {
+      "file": "banana_49_Savior_on_Blood_SPb.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 4.1,
+        "tampered": 95.9
+      },
+      "mask_cov_%": 13.776016235351562
+    },
+    {
+      "file": "banana_tempered_005.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.3,
+        "tampered": 99.6
+      },
+      "mask_cov_%": 5.935169347879684
+    },
+    {
+      "file": "banana_tempered_013.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.3,
+        "tampered": 99.7
+      },
+      "mask_cov_%": 7.322966746794872
+    },
+    {
+      "file": "banana_tempered_014.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 2.143044255424063
+    },
+    {
+      "file": "banana_tempered_019.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 9.8,
+        "tampered": 90.2
+      },
+      "mask_cov_%": 5.259665464743589
+    },
+    {
+      "file": "banana_tempered_026.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 52.7,
+        "tampered": 47.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_031.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 9.5,
+        "tampered": 90.5
+      },
+      "mask_cov_%": 7.099532328648915
+    },
+    {
+      "file": "banana_tempered_037.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 1.7,
+        "tampered": 98.3
+      },
+      "mask_cov_%": 3.779027212771203
+    },
+    {
+      "file": "banana_tempered_038.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 56.2,
+        "tampered": 43.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_042.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 5.907047429733728
+    },
+    {
+      "file": "banana_tempered_054.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 2.319191475591716
+    },
+    {
+      "file": "banana_tempered_057.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 27.3,
+        "fake": 0.0,
+        "tampered": 72.6
+      },
+      "mask_cov_%": 15.974308894230768
+    },
+    {
+      "file": "banana_tempered_059.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 3.4,
+        "tampered": 96.6
+      },
+      "mask_cov_%": 6.790191229043392
+    },
+    {
+      "file": "banana_tempered_063.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 1.6560150086291914
+    },
+    {
+      "file": "banana_tempered_067.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 0.9174294255424064
+    },
+    {
+      "file": "banana_tempered_069.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.0,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 1.958518244575937
+    },
+    {
+      "file": "banana_tempered_073.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "real",
+      "correct": false,
+      "probs": {
+        "real": 85.7,
+        "fake": 0.0,
+        "tampered": 14.3
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_074.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 5.5,
+        "tampered": 94.5
+      },
+      "mask_cov_%": 2.5719035071499015
+    },
+    {
+      "file": "banana_tempered_076.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.7,
+        "tampered": 99.3
+      },
+      "mask_cov_%": 2.575177977071006
+    },
+    {
+      "file": "banana_tempered_077.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.5,
+        "tampered": 99.4
+      },
+      "mask_cov_%": 7.162710336538461
+    },
+    {
+      "file": "banana_tempered_080.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.4,
+        "tampered": 99.6
+      },
+      "mask_cov_%": 19.815358419625245
+    },
+    {
+      "file": "banana_tempered_085.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 21.2,
+        "fake": 0.0,
+        "tampered": 78.8
+      },
+      "mask_cov_%": 4.337131718441815
+    },
+    {
+      "file": "banana_tempered_086.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 6.291027181952663
+    },
+    {
+      "file": "banana_tempered_093.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "real",
+      "correct": false,
+      "probs": {
+        "real": 99.4,
+        "fake": 0.0,
+        "tampered": 0.6
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_095.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 61.5,
+        "tampered": 38.5
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_104.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.4,
+        "tampered": 99.5
+      },
+      "mask_cov_%": 3.8779354659763317
+    },
+    {
+      "file": "banana_tempered_110.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.1,
+        "tampered": 99.8
+      },
+      "mask_cov_%": 11.693421012080869
+    },
+    {
+      "file": "banana_tempered_117.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 12.4,
+        "tampered": 87.5
+      },
+      "mask_cov_%": 22.3424787352071
+    },
+    {
+      "file": "banana_tempered_131.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 1.8,
+        "tampered": 98.2
+      },
+      "mask_cov_%": 9.641195142998027
+    },
+    {
+      "file": "banana_tempered_137.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 5.8,
+        "tampered": 94.2
+      },
+      "mask_cov_%": 15.703009430473372
+    },
+    {
+      "file": "banana_tempered_145.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 86.3,
+        "tampered": 13.7
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "banana_tempered_148.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.7,
+        "tampered": 99.3
+      },
+      "mask_cov_%": 15.210586939102564
+    },
+    {
+      "file": "banana_tempered_153.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 6.2,
+        "tampered": 93.8
+      },
+      "mask_cov_%": 1.7380693725345169
+    },
+    {
+      "file": "banana_tempered_157.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 5.2953957100591715
+    },
+    {
+      "file": "banana_tempered_158.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 6.0327292899408285
+    },
+    {
+      "file": "banana_tempered_162.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 20.7,
+        "fake": 0.1,
+        "tampered": 79.2
+      },
+      "mask_cov_%": 8.649262927827381
+    },
+    {
+      "file": "banana_tempered_165.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.8,
+        "tampered": 99.2
+      },
+      "mask_cov_%": 18.7659871178501
+    },
+    {
+      "file": "banana_tempered_170.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 24.5,
+        "tampered": 75.5
+      },
+      "mask_cov_%": 8.023221770216962
+    },
+    {
+      "file": "banana_tempered_174.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 3.748112364398422
+    },
+    {
+      "file": "banana_tempered_178.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.3,
+        "fake": 0.1,
+        "tampered": 99.6
+      },
+      "mask_cov_%": 3.339477779832347
+    },
+    {
+      "file": "banana_tempered_185.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 4.415815304487179
+    },
+    {
+      "file": "banana_tempered_188.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 7.43468395586785
+    },
+    {
+      "file": "banana_tempered_190.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.0,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 5.676775147928994
+    },
+    {
+      "file": "banana_tempered_196.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 3.8700382149901382
+    },
+    {
+      "file": "flux_tempered_002.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.2,
+        "fake": 0.0,
+        "tampered": 99.8
+      },
+      "mask_cov_%": 3.6497802734375
+    },
+    {
+      "file": "flux_tempered_004.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 19.1204833984375
+    },
+    {
+      "file": "flux_tempered_011.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 4.0299072265625
+    },
+    {
+      "file": "flux_tempered_014.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 15.856119791666668
+    },
+    {
+      "file": "flux_tempered_017.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 6.070051522090517
+    },
+    {
+      "file": "flux_tempered_021.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 3.1734619140625004
+    },
+    {
+      "file": "flux_tempered_022.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "real",
+      "correct": false,
+      "probs": {
+        "real": 99.2,
+        "fake": 0.0,
+        "tampered": 0.8
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_tempered_029.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 5.4,
+        "fake": 4.5,
+        "tampered": 90.1
+      },
+      "mask_cov_%": 9.0399169921875
+    },
+    {
+      "file": "flux_tempered_032.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 6.4,
+        "fake": 0.0,
+        "tampered": 93.6
+      },
+      "mask_cov_%": 3.3076578776041665
+    },
+    {
+      "file": "flux_tempered_036.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 1.7,
+        "tampered": 98.3
+      },
+      "mask_cov_%": 18.6925048828125
+    },
+    {
+      "file": "flux_tempered_037.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 3.5,
+        "tampered": 96.5
+      },
+      "mask_cov_%": 17.015828450520836
+    },
+    {
+      "file": "flux_tempered_043.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 12.616495768229166
+    },
+    {
+      "file": "flux_tempered_048.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 1.3,
+        "tampered": 98.7
+      },
+      "mask_cov_%": 10.2535400390625
+    },
+    {
+      "file": "flux_tempered_053.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 2.0447998046875
+    },
+    {
+      "file": "flux_tempered_057.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 5.100748697916667
+    },
+    {
+      "file": "flux_tempered_058.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.4,
+        "fake": 0.6,
+        "tampered": 99.0
+      },
+      "mask_cov_%": 13.319824218750002
+    },
+    {
+      "file": "flux_tempered_060.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.8,
+        "fake": 1.5,
+        "tampered": 97.6
+      },
+      "mask_cov_%": 8.334635416666666
+    },
+    {
+      "file": "flux_tempered_078.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "fake",
+      "correct": false,
+      "probs": {
+        "real": 0.0,
+        "fake": 83.1,
+        "tampered": 16.9
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_tempered_083.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 1.7,
+        "tampered": 98.3
+      },
+      "mask_cov_%": 3.7635498046875
+    },
+    {
+      "file": "flux_tempered_085.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "real",
+      "correct": false,
+      "probs": {
+        "real": 91.0,
+        "fake": 0.0,
+        "tampered": 9.0
+      },
+      "mask_cov_%": null
+    },
+    {
+      "file": "flux_tempered_087.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 5.896484375
+    },
+    {
+      "file": "flux_tempered_090.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 21.2,
+        "tampered": 78.8
+      },
+      "mask_cov_%": 3.451416015625
+    },
+    {
+      "file": "flux_tempered_102.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 1.8,
+        "fake": 1.6,
+        "tampered": 96.7
+      },
+      "mask_cov_%": 21.545328776041668
+    },
+    {
+      "file": "flux_tempered_113.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 1.1,
+        "fake": 1.7,
+        "tampered": 97.2
+      },
+      "mask_cov_%": 13.453409830729166
+    },
+    {
+      "file": "flux_tempered_118.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 10.4,
+        "fake": 0.0,
+        "tampered": 89.5
+      },
+      "mask_cov_%": 4.844075520833333
+    },
+    {
+      "file": "flux_tempered_123.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 21.1,
+        "fake": 0.1,
+        "tampered": 78.8
+      },
+      "mask_cov_%": 40.841552734375
+    },
+    {
+      "file": "flux_tempered_125.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 4.8,
+        "tampered": 95.2
+      },
+      "mask_cov_%": 3.7237548828125
+    },
+    {
+      "file": "flux_tempered_130.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 3.266031901041667
+    },
+    {
+      "file": "flux_tempered_132.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 45.7,
+        "fake": 0.0,
+        "tampered": 54.3
+      },
+      "mask_cov_%": 2.506876627604167
+    },
+    {
+      "file": "flux_tempered_133.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 8.9791259765625
+    },
+    {
+      "file": "flux_tempered_137.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 10.730061848958334
+    },
+    {
+      "file": "flux_tempered_146.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 1.2,
+        "fake": 0.1,
+        "tampered": 98.7
+      },
+      "mask_cov_%": 2.4378255208333335
+    },
+    {
+      "file": "flux_tempered_153.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 8.3,
+        "fake": 0.0,
+        "tampered": 91.7
+      },
+      "mask_cov_%": 13.025253120510058
+    },
+    {
+      "file": "flux_tempered_156.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 1.0,
+        "fake": 0.0,
+        "tampered": 99.0
+      },
+      "mask_cov_%": 4.84521484375
+    },
+    {
+      "file": "flux_tempered_158.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 13.0,
+        "fake": 0.2,
+        "tampered": 86.8
+      },
+      "mask_cov_%": 10.384684244791668
+    },
+    {
+      "file": "flux_tempered_160.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 2.3,
+        "tampered": 97.7
+      },
+      "mask_cov_%": 5.6783447265625
+    },
+    {
+      "file": "flux_tempered_163.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 32.8,
+        "fake": 0.4,
+        "tampered": 66.8
+      },
+      "mask_cov_%": 12.8592529296875
+    },
+    {
+      "file": "flux_tempered_164.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.1,
+        "fake": 0.8,
+        "tampered": 99.1
+      },
+      "mask_cov_%": 10.383382161458334
+    },
+    {
+      "file": "flux_tempered_181.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.0,
+        "tampered": 100.0
+      },
+      "mask_cov_%": 7.874511718750001
+    },
+    {
+      "file": "flux_tempered_185.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 11.7,
+        "fake": 0.2,
+        "tampered": 88.1
+      },
+      "mask_cov_%": 10.691324869791668
+    },
+    {
+      "file": "flux_tempered_186.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.3,
+        "fake": 9.1,
+        "tampered": 90.6
+      },
+      "mask_cov_%": 16.670613606770836
+    },
+    {
+      "file": "flux_tempered_188.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.2,
+        "tampered": 99.7
+      },
+      "mask_cov_%": 4.871692876706178
+    },
+    {
+      "file": "flux_tempered_193.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 0.0,
+        "fake": 0.1,
+        "tampered": 99.9
+      },
+      "mask_cov_%": 5.731404622395833
+    },
+    {
+      "file": "flux_tempered_195.png",
+      "folder": "tempered",
+      "true": "tampered",
+      "pred": "tampered",
+      "correct": true,
+      "probs": {
+        "real": 8.0,
+        "fake": 0.4,
+        "tampered": 91.6
+      },
+      "mask_cov_%": 3.0655924479166665
+    }
+  ],
+  "masks": [
+    {
+      "file": "2019-06-17 18-39-53.JPEG",
+      "folder": "real",
+      "coverage": 62.27
+    },
+    {
+      "file": "IMG_20260220_105507.png",
+      "folder": "real",
+      "coverage": 8.29
+    },
+    {
+      "file": "IMG_20260220_105511.png",
+      "folder": "real",
+      "coverage": 12.75
+    },
+    {
+      "file": "IMG_20260220_105631.png",
+      "folder": "real",
+      "coverage": 12.33
+    },
+    {
+      "file": "IMG_20260220_110139.png",
+      "folder": "real",
+      "coverage": 2.08
+    },
+    {
+      "file": "IMG_20260323_193122.png",
+      "folder": "real",
+      "coverage": 25.54
+    },
+    {
+      "file": "banana_02_Izmailovsky_Kremlin_Moscow.png",
+      "folder": "tempered",
+      "coverage": 5.44
+    },
+    {
+      "file": "banana_04_GUM_Red_Square_Moscow.png",
+      "folder": "tempered",
+      "coverage": 5.41
+    },
+    {
+      "file": "banana_05_Red_Square_Moscow.png",
+      "folder": "tempered",
+      "coverage": 9.28
+    },
+    {
+      "file": "banana_09_Novodevichy_Convent_Moscow.png",
+      "folder": "tempered",
+      "coverage": 2.68
+    },
+    {
+      "file": "banana_10_Kazan_Cathedral_SPb.png",
+      "folder": "tempered",
+      "coverage": 3.08
+    },
+    {
+      "file": "banana_22_Novodevichy_Convent_Moscow.png",
+      "folder": "tempered",
+      "coverage": 5.66
+    },
+    {
+      "file": "banana_28_Zaryadye_Park_Moscow.png",
+      "folder": "tempered",
+      "coverage": 6.29
+    },
+    {
+      "file": "banana_31_Nevsky_Prospect_SPb.png",
+      "folder": "tempered",
+      "coverage": 3.07
+    },
+    {
+      "file": "banana_33_Peterhof_SPb.png",
+      "folder": "tempered",
+      "coverage": 3.63
+    },
+    {
+      "file": "banana_45_Kolomenskoye_Moscow.png",
+      "folder": "tempered",
+      "coverage": 7.73
+    },
+    {
+      "file": "banana_47_Izmailovsky_Kremlin_Moscow.png",
+      "folder": "tempered",
+      "coverage": 15.63
+    },
+    {
+      "file": "banana_49_Savior_on_Blood_SPb.png",
+      "folder": "tempered",
+      "coverage": 13.78
+    },
+    {
+      "file": "banana_tempered_005.png",
+      "folder": "tempered",
+      "coverage": 5.94
+    },
+    {
+      "file": "banana_tempered_013.png",
+      "folder": "tempered",
+      "coverage": 7.32
+    },
+    {
+      "file": "banana_tempered_014.png",
+      "folder": "tempered",
+      "coverage": 2.14
+    },
+    {
+      "file": "banana_tempered_019.png",
+      "folder": "tempered",
+      "coverage": 5.26
+    },
+    {
+      "file": "banana_tempered_031.png",
+      "folder": "tempered",
+      "coverage": 7.1
+    },
+    {
+      "file": "banana_tempered_037.png",
+      "folder": "tempered",
+      "coverage": 3.78
+    },
+    {
+      "file": "banana_tempered_042.png",
+      "folder": "tempered",
+      "coverage": 5.91
+    },
+    {
+      "file": "banana_tempered_054.png",
+      "folder": "tempered",
+      "coverage": 2.32
+    },
+    {
+      "file": "banana_tempered_057.png",
+      "folder": "tempered",
+      "coverage": 15.97
+    },
+    {
+      "file": "banana_tempered_059.png",
+      "folder": "tempered",
+      "coverage": 6.79
+    },
+    {
+      "file": "banana_tempered_063.png",
+      "folder": "tempered",
+      "coverage": 1.66
+    },
+    {
+      "file": "banana_tempered_067.png",
+      "folder": "tempered",
+      "coverage": 0.92
+    },
+    {
+      "file": "banana_tempered_069.png",
+      "folder": "tempered",
+      "coverage": 1.96
+    },
+    {
+      "file": "banana_tempered_074.png",
+      "folder": "tempered",
+      "coverage": 2.57
+    },
+    {
+      "file": "banana_tempered_076.png",
+      "folder": "tempered",
+      "coverage": 2.58
+    },
+    {
+      "file": "banana_tempered_077.png",
+      "folder": "tempered",
+      "coverage": 7.16
+    },
+    {
+      "file": "banana_tempered_080.png",
+      "folder": "tempered",
+      "coverage": 19.82
+    },
+    {
+      "file": "banana_tempered_085.png",
+      "folder": "tempered",
+      "coverage": 4.34
+    },
+    {
+      "file": "banana_tempered_086.png",
+      "folder": "tempered",
+      "coverage": 6.29
+    },
+    {
+      "file": "banana_tempered_104.png",
+      "folder": "tempered",
+      "coverage": 3.88
+    },
+    {
+      "file": "banana_tempered_110.png",
+      "folder": "tempered",
+      "coverage": 11.69
+    },
+    {
+      "file": "banana_tempered_117.png",
+      "folder": "tempered",
+      "coverage": 22.34
+    },
+    {
+      "file": "banana_tempered_131.png",
+      "folder": "tempered",
+      "coverage": 9.64
+    },
+    {
+      "file": "banana_tempered_137.png",
+      "folder": "tempered",
+      "coverage": 15.7
+    },
+    {
+      "file": "banana_tempered_148.png",
+      "folder": "tempered",
+      "coverage": 15.21
+    },
+    {
+      "file": "banana_tempered_153.png",
+      "folder": "tempered",
+      "coverage": 1.74
+    },
+    {
+      "file": "banana_tempered_157.png",
+      "folder": "tempered",
+      "coverage": 5.3
+    },
+    {
+      "file": "banana_tempered_158.png",
+      "folder": "tempered",
+      "coverage": 6.03
+    },
+    {
+      "file": "banana_tempered_162.png",
+      "folder": "tempered",
+      "coverage": 8.65
+    },
+    {
+      "file": "banana_tempered_165.png",
+      "folder": "tempered",
+      "coverage": 18.77
+    },
+    {
+      "file": "banana_tempered_170.png",
+      "folder": "tempered",
+      "coverage": 8.02
+    },
+    {
+      "file": "banana_tempered_174.png",
+      "folder": "tempered",
+      "coverage": 3.75
+    },
+    {
+      "file": "banana_tempered_178.png",
+      "folder": "tempered",
+      "coverage": 3.34
+    },
+    {
+      "file": "banana_tempered_185.png",
+      "folder": "tempered",
+      "coverage": 4.42
+    },
+    {
+      "file": "banana_tempered_188.png",
+      "folder": "tempered",
+      "coverage": 7.43
+    },
+    {
+      "file": "banana_tempered_190.png",
+      "folder": "tempered",
+      "coverage": 5.68
+    },
+    {
+      "file": "banana_tempered_196.png",
+      "folder": "tempered",
+      "coverage": 3.87
+    },
+    {
+      "file": "flux_tempered_002.png",
+      "folder": "tempered",
+      "coverage": 3.65
+    },
+    {
+      "file": "flux_tempered_004.png",
+      "folder": "tempered",
+      "coverage": 19.12
+    },
+    {
+      "file": "flux_tempered_011.png",
+      "folder": "tempered",
+      "coverage": 4.03
+    },
+    {
+      "file": "flux_tempered_014.png",
+      "folder": "tempered",
+      "coverage": 15.86
+    },
+    {
+      "file": "flux_tempered_017.png",
+      "folder": "tempered",
+      "coverage": 6.07
+    },
+    {
+      "file": "flux_tempered_021.png",
+      "folder": "tempered",
+      "coverage": 3.17
+    },
+    {
+      "file": "flux_tempered_029.png",
+      "folder": "tempered",
+      "coverage": 9.04
+    },
+    {
+      "file": "flux_tempered_032.png",
+      "folder": "tempered",
+      "coverage": 3.31
+    },
+    {
+      "file": "flux_tempered_036.png",
+      "folder": "tempered",
+      "coverage": 18.69
+    },
+    {
+      "file": "flux_tempered_037.png",
+      "folder": "tempered",
+      "coverage": 17.02
+    },
+    {
+      "file": "flux_tempered_043.png",
+      "folder": "tempered",
+      "coverage": 12.62
+    },
+    {
+      "file": "flux_tempered_048.png",
+      "folder": "tempered",
+      "coverage": 10.25
+    },
+    {
+      "file": "flux_tempered_053.png",
+      "folder": "tempered",
+      "coverage": 2.04
+    },
+    {
+      "file": "flux_tempered_057.png",
+      "folder": "tempered",
+      "coverage": 5.1
+    },
+    {
+      "file": "flux_tempered_058.png",
+      "folder": "tempered",
+      "coverage": 13.32
+    },
+    {
+      "file": "flux_tempered_060.png",
+      "folder": "tempered",
+      "coverage": 8.33
+    },
+    {
+      "file": "flux_tempered_083.png",
+      "folder": "tempered",
+      "coverage": 3.76
+    },
+    {
+      "file": "flux_tempered_087.png",
+      "folder": "tempered",
+      "coverage": 5.9
+    },
+    {
+      "file": "flux_tempered_090.png",
+      "folder": "tempered",
+      "coverage": 3.45
+    },
+    {
+      "file": "flux_tempered_102.png",
+      "folder": "tempered",
+      "coverage": 21.55
+    },
+    {
+      "file": "flux_tempered_113.png",
+      "folder": "tempered",
+      "coverage": 13.45
+    },
+    {
+      "file": "flux_tempered_118.png",
+      "folder": "tempered",
+      "coverage": 4.84
+    },
+    {
+      "file": "flux_tempered_123.png",
+      "folder": "tempered",
+      "coverage": 40.84
+    },
+    {
+      "file": "flux_tempered_125.png",
+      "folder": "tempered",
+      "coverage": 3.72
+    },
+    {
+      "file": "flux_tempered_130.png",
+      "folder": "tempered",
+      "coverage": 3.27
+    },
+    {
+      "file": "flux_tempered_132.png",
+      "folder": "tempered",
+      "coverage": 2.51
+    },
+    {
+      "file": "flux_tempered_133.png",
+      "folder": "tempered",
+      "coverage": 8.98
+    },
+    {
+      "file": "flux_tempered_137.png",
+      "folder": "tempered",
+      "coverage": 10.73
+    },
+    {
+      "file": "flux_tempered_146.png",
+      "folder": "tempered",
+      "coverage": 2.44
+    },
+    {
+      "file": "flux_tempered_153.png",
+      "folder": "tempered",
+      "coverage": 13.03
+    },
+    {
+      "file": "flux_tempered_156.png",
+      "folder": "tempered",
+      "coverage": 4.85
+    },
+    {
+      "file": "flux_tempered_158.png",
+      "folder": "tempered",
+      "coverage": 10.38
+    },
+    {
+      "file": "flux_tempered_160.png",
+      "folder": "tempered",
+      "coverage": 5.68
+    },
+    {
+      "file": "flux_tempered_163.png",
+      "folder": "tempered",
+      "coverage": 12.86
+    },
+    {
+      "file": "flux_tempered_164.png",
+      "folder": "tempered",
+      "coverage": 10.38
+    },
+    {
+      "file": "flux_tempered_181.png",
+      "folder": "tempered",
+      "coverage": 7.87
+    },
+    {
+      "file": "flux_tempered_185.png",
+      "folder": "tempered",
+      "coverage": 10.69
+    },
+    {
+      "file": "flux_tempered_186.png",
+      "folder": "tempered",
+      "coverage": 16.67
+    },
+    {
+      "file": "flux_tempered_188.png",
+      "folder": "tempered",
+      "coverage": 4.87
+    },
+    {
+      "file": "flux_tempered_193.png",
+      "folder": "tempered",
+      "coverage": 5.73
+    },
+    {
+      "file": "flux_tempered_195.png",
+      "folder": "tempered",
+      "coverage": 3.07
+    }
+  ],
+  "errors": []
+}

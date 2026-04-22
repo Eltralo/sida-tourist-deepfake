@@ -1,0 +1,154 @@
+=================================================================
+  РЕЗУЛЬТАТЫ  —  дообученная SIDA-7B  (cls_head_new.pth)
+=================================================================
+  Время: 136.2с  (2.20 img/s)
+  Обработано: 300  |  Ошибок: 0
+
+  ОБЩАЯ ACCURACY:  284/300  =  94.67%
+
+  Класс        Correct   Total   Accuracy
+  ----------------------------------------
+  real              94     100     94.00%
+  fake             100     100    100.00%
+  tampered          90     100     90.00%
+
+  Матрица ошибок (true / pred):
+                     →real       →fake   →tampered
+  ------------------------------------------------
+          real          94           0           6
+          fake           0         100           0
+      tampered           4           6          90
+
+=================================================================
+  РАЗБИВКА ПО ИНСТРУМЕНТАМ
+=================================================================
+  Папка                   Total Correct    Acc%  → по классам
+  -----------------------------------------------------------------
+  full_synt                 100     100  100.0%  [r:  0  f:100  t:  0]
+  real                      100      94   94.0%  [r: 94  f:  0  t:  6]
+  tempered                  100      90   90.0%  [r:  4  f:  6  t: 90]
+
+=================================================================
+  МАСКИ ДЛЯ TAMPERED-ПРЕДСКАЗАНИЙ
+=================================================================
+  Файл                                    Папка             Покрытие
+  --------------------------------------------------------------------
+  2019-06-17 18-39-53.JPEG                real                 62.3%
+  IMG_20260220_105507.png                 real                  8.3%
+  IMG_20260220_105511.png                 real                 12.8%
+  IMG_20260220_105631.png                 real                 12.3%
+  IMG_20260220_110139.png                 real                  2.1%
+  IMG_20260323_193122.png                 real                 25.5%
+  banana_02_Izmailovsky_Kremlin_Moscow.pngtempered              5.4%
+  banana_04_GUM_Red_Square_Moscow.png     tempered              5.4%
+  banana_05_Red_Square_Moscow.png         tempered              9.3%
+  banana_09_Novodevichy_Convent_Moscow.pngtempered              2.7%
+  banana_10_Kazan_Cathedral_SPb.png       tempered              3.1%
+  banana_22_Novodevichy_Convent_Moscow.pngtempered              5.7%
+  banana_28_Zaryadye_Park_Moscow.png      tempered              6.3%
+  banana_31_Nevsky_Prospect_SPb.png       tempered              3.1%
+  banana_33_Peterhof_SPb.png              tempered              3.6%
+  banana_45_Kolomenskoye_Moscow.png       tempered              7.7%
+  banana_47_Izmailovsky_Kremlin_Moscow.pngtempered             15.6%
+  banana_49_Savior_on_Blood_SPb.png       tempered             13.8%
+  banana_tempered_005.png                 tempered              5.9%
+  banana_tempered_013.png                 tempered              7.3%
+  banana_tempered_014.png                 tempered              2.1%
+  banana_tempered_019.png                 tempered              5.3%
+  banana_tempered_031.png                 tempered              7.1%
+  banana_tempered_037.png                 tempered              3.8%
+  banana_tempered_042.png                 tempered              5.9%
+  banana_tempered_054.png                 tempered              2.3%
+  banana_tempered_057.png                 tempered             16.0%
+  banana_tempered_059.png                 tempered              6.8%
+  banana_tempered_063.png                 tempered              1.7%
+  banana_tempered_067.png                 tempered              0.9%
+  banana_tempered_069.png                 tempered              2.0%
+  banana_tempered_074.png                 tempered              2.6%
+  banana_tempered_076.png                 tempered              2.6%
+  banana_tempered_077.png                 tempered              7.2%
+  banana_tempered_080.png                 tempered             19.8%
+  banana_tempered_085.png                 tempered              4.3%
+  banana_tempered_086.png                 tempered              6.3%
+  banana_tempered_104.png                 tempered              3.9%
+  banana_tempered_110.png                 tempered             11.7%
+  banana_tempered_117.png                 tempered             22.3%
+  banana_tempered_131.png                 tempered              9.6%
+  banana_tempered_137.png                 tempered             15.7%
+  banana_tempered_148.png                 tempered             15.2%
+  banana_tempered_153.png                 tempered              1.7%
+  banana_tempered_157.png                 tempered              5.3%
+  banana_tempered_158.png                 tempered              6.0%
+  banana_tempered_162.png                 tempered              8.7%
+  banana_tempered_165.png                 tempered             18.8%
+  banana_tempered_170.png                 tempered              8.0%
+  banana_tempered_174.png                 tempered              3.8%
+  banana_tempered_178.png                 tempered              3.3%
+  banana_tempered_185.png                 tempered              4.4%
+  banana_tempered_188.png                 tempered              7.4%
+  banana_tempered_190.png                 tempered              5.7%
+  banana_tempered_196.png                 tempered              3.9%
+  flux_tempered_002.png                   tempered              3.6%
+  flux_tempered_004.png                   tempered             19.1%
+  flux_tempered_011.png                   tempered              4.0%
+  flux_tempered_014.png                   tempered             15.9%
+  flux_tempered_017.png                   tempered              6.1%
+  flux_tempered_021.png                   tempered              3.2%
+  flux_tempered_029.png                   tempered              9.0%
+  flux_tempered_032.png                   tempered              3.3%
+  flux_tempered_036.png                   tempered             18.7%
+  flux_tempered_037.png                   tempered             17.0%
+  flux_tempered_043.png                   tempered             12.6%
+  flux_tempered_048.png                   tempered             10.2%
+  flux_tempered_053.png                   tempered              2.0%
+  flux_tempered_057.png                   tempered              5.1%
+  flux_tempered_058.png                   tempered             13.3%
+  flux_tempered_060.png                   tempered              8.3%
+  flux_tempered_083.png                   tempered              3.8%
+  flux_tempered_087.png                   tempered              5.9%
+  flux_tempered_090.png                   tempered              3.5%
+  flux_tempered_102.png                   tempered             21.6%
+  flux_tempered_113.png                   tempered             13.4%
+  flux_tempered_118.png                   tempered              4.8%
+  flux_tempered_123.png                   tempered             40.8%
+  flux_tempered_125.png                   tempered              3.7%
+  flux_tempered_130.png                   tempered              3.3%
+  flux_tempered_132.png                   tempered              2.5%
+  flux_tempered_133.png                   tempered              9.0%
+  flux_tempered_137.png                   tempered             10.7%
+  flux_tempered_146.png                   tempered              2.4%
+  flux_tempered_153.png                   tempered             13.0%
+  flux_tempered_156.png                   tempered              4.8%
+  flux_tempered_158.png                   tempered             10.4%
+  flux_tempered_160.png                   tempered              5.7%
+  flux_tempered_163.png                   tempered             12.9%
+  flux_tempered_164.png                   tempered             10.4%
+  flux_tempered_181.png                   tempered              7.9%
+  flux_tempered_185.png                   tempered             10.7%
+  flux_tempered_186.png                   tempered             16.7%
+  flux_tempered_188.png                   tempered              4.9%
+  flux_tempered_193.png                   tempered              5.7%
+  flux_tempered_195.png                   tempered              3.1%
+
+  Масок сгенерировано: 96  |  Среднее покрытие: 8.9%
+  Сохранены в: results_final/masks/  и  results_final/overlays/
+
+=================================================================
+  ОШИБКИ (16 шт.):
+  ✗  true=real        pred=tampered    [r= 26.4% f=  0.2% t= 73.5%]  [real]  2019-06-17 18-39-53.JPEG
+  ✗  true=real        pred=tampered    [r= 10.6% f=  0.0% t= 89.4%]  [real]  IMG_20260220_105507.png
+  ✗  true=real        pred=tampered    [r= 10.2% f=  0.2% t= 89.6%]  [real]  IMG_20260220_105511.png
+  ✗  true=real        pred=tampered    [r=  4.9% f=  3.5% t= 91.5%]  [real]  IMG_20260220_105631.png
+  ✗  true=real        pred=tampered    [r= 34.5% f=  0.0% t= 65.5%]  [real]  IMG_20260220_110139.png
+  ✗  true=real        pred=tampered    [r= 14.7% f=  0.1% t= 85.1%]  [real]  IMG_20260323_193122.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 64.4% t= 35.6%]  [tempered]  banana_12_MSU_Sparrow_Hills.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 52.7% t= 47.3%]  [tempered]  banana_tempered_026.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 56.2% t= 43.8%]  [tempered]  banana_tempered_038.png
+  ✗  true=tampered    pred=real        [r= 85.7% f=  0.0% t= 14.3%]  [tempered]  banana_tempered_073.png
+  ✗  true=tampered    pred=real        [r= 99.4% f=  0.0% t=  0.6%]  [tempered]  banana_tempered_093.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 61.5% t= 38.5%]  [tempered]  banana_tempered_095.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 86.3% t= 13.7%]  [tempered]  banana_tempered_145.png
+  ✗  true=tampered    pred=real        [r= 99.2% f=  0.0% t=  0.8%]  [tempered]  flux_tempered_022.png
+  ✗  true=tampered    pred=fake        [r=  0.0% f= 83.1% t= 16.9%]  [tempered]  flux_tempered_078.png
+  ✗  true=tampered    pred=real        [r= 91.0% f=  0.0% t=  9.0%]  [tempered]  flux_tempered_085.png
+=================================================================
