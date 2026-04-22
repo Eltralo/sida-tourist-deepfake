@@ -191,12 +191,11 @@ cd detection
 python finetune.py
 ```
 
-**Этап 1** (run once, ~20 min): 
-extracts and caches [CLS] feature vectors
-from all images using the frozen SIDA-7B backbone.
+**Этап 1** (выполняется однократно, ~20 мин): 
+Извлечение и кэширование векторов признаков [CLS] из всех изображений с использованием замороженного энкодера SIDA-7B. Результаты сохраняются на диск для повторного использования.
 
-**Этап 2** (seconds per epoch): 
-trains the classification head on cached features.
+**Этап 2** : 
+Обучение классификационной головы на закэшированных признаках. .
 
 ```bash
 # Force re-extraction (skip cache):
