@@ -200,10 +200,8 @@ python finetune.py
 Обучение классификационной головы на закэшированных признаках. .
 
 ```bash
-# Force re-extraction (skip cache):
 python finetune.py --no-cache
 
-# Custom paths:
 python finetune.py \
     --model-dir ../ck/SIDA-7B \
     --train-dir ../photo/train \
