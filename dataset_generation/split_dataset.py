@@ -26,7 +26,7 @@ Output layout (--output-dir):
             full_synt/     100 images
             tempered/      100 images
 
-Split ratio: 1000 train / 300 test  (seed=42)
+Split ratio: 999 train / 300 test  (seed=42)
 
 Usage
 ─────
