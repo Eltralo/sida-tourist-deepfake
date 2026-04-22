@@ -239,11 +239,11 @@ python baseline_eval.py
 python eval_metrics.py
 ```
 
-Results are saved to `results_final/`:
-- `report.txt` — human-readable report
-- `results.json` — per-image predictions
-- `masks/` — binary masks for TAMPERED predictions
-- `overlays/` — original images with mask overlay
+**Результаты сохраняются в директорию results_final/**:
+- `report.txt` — отчёт в текстовом формате с итоговыми метриками
+- `results.json` — предсказания для каждого изображения
+- `masks/` — бинарные маски локализации для изображений класса TAMPERED
+- `overlays/` — исходные изображения с наложенными масками манипуляций
 
 ---
 
