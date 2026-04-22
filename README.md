@@ -261,7 +261,7 @@ Results are saved to `results_final/`:
 }
 ```
 
-Original SIDA paper:
+Оригинальная статья SIDA:
 
 ```bibtex
 @article{huang2024sida,
