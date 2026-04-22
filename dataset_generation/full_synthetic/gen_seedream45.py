@@ -2,18 +2,18 @@
 """
 dataset_generation/full_synthetic/gen_seedream45.py
 ────────────────────────────────────────────────────
-Generates fully synthetic tourist photographs via the ruGPT.io API.
-Model  : seedream/4.5-text-to-image  (ByteDance, scalable diffusion transformer)
-Domain : Moscow & Saint Petersburg landmarks, diverse Russian pedestrians
-Output : dataset/full_synthetic/seedream45/
-Total generated for the thesis dataset: 123 images
+Генерация полностью синтетических туристических фотографий через API ruGPT.io.
+Модель  : seedream/4.5-text-to-image  (ByteDance, масштабируемый диффузионный трансформер)
+Домен   : Достопримечательности Москвы и Санкт-Петербурга, различные люди
+Выход   : dataset/full_synthetic/seedream45/
+Всего сгенерировано для датасета ВКР: 123 изображения
 
-Note on prompt length
-─────────────────────
-Seedream 4.5 accepts prompts up to 3 000 characters.
-The builder in this script stays safely within 2 900 characters.
+Примечание о длине промпта
+───────────────────────────
+Seedream 4.5 поддерживает промпты длиной до 3 000 символов.
+Сборщик промптов в этом скрипте безопасно ограничивает длину на уровне 2 900 символов.
 
-Usage
+Использование
 ─────
     export RUGPT_API_KEY="your_key_here"
     python gen_seedream45.py
