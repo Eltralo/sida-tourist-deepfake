@@ -2,8 +2,10 @@
 """
 dataset_generation/_api_client.py
 ──────────────────────────────────
-Shared ruGPT.io API helpers used by all generation scripts.
-Import this module instead of duplicating HTTP logic in each script.
+Общие вспомогательные функции для работы с API ruGPT.io, используемые всеми скриптами генерации.
+Импортируйте этот модуль вместо дублирования HTTP-логики в каждом скрипте.
+
+Пример использования
 
     from _api_client import get_api_key, submit_text2img, submit_img2img, poll_result, download_image
 """
