@@ -2,40 +2,40 @@
 """
 detection/finetune.py
 ─────────────────────
-Two-phase parameter-efficient fine-tuning of SIDA-7B on a custom dataset.
+Двухэтапное параметрически-эффективное дообучение модели SIDA-7B 
+на авторском датасете туристических изображений.
 
-Overview
-────────
-Phase 1 — Feature extraction (run once, cached):
-    The full SIDA-7B model (CLIP + SAM + LLaMA-7B) is run in inference mode
-    on every training and test image.  For each image the [CLS] hidden-state
-    vector  h_cls ∈ ℝ⁴⁰⁹⁶  is extracted from the last LLaMA layer and saved
-    to disk.  The heavy backbone is then unloaded from GPU memory.
+Методология
+─────────────────
+Этап 1 — Извлечение признаков (выполняется однократно, результаты кэшируются):
+    Полная модель SIDA-7B (CLIP + SAM + LLaMA-7B) запускается в режиме инференса
+    Для каждого изображения извлекается вектор скрытого состояния [CLS]  h_cls ∈ ℝ⁴⁰⁹⁶
+    из последнего слоя LLaMA с последующим сохранением.
 
-Phase 2 — cls_head training (fast, repeatable):
-    A small classification head  Linear(4096→2048) → ReLU → Dropout(0.1)
-    → Linear(2048→3)  is trained on the cached feature tensors.
-    Only 8 396 803 parameters (0.114% of the full model) are updated.
+Этап 2 — Обучение классификационной головы :
+    Linear(4096→2048) → ReLU → Dropout(0.1)→ Linear(2048→3)  
+    обучается на кэшированных векторах признаков.
+    Обновляется только 0.114% от всех параметров.
 
-Regularisation strategy (five mechanisms, applied simultaneously):
-    1. Backbone freeze         — 99.886% of parameters are never updated
-    2. Dropout(p=0.1)          — added vs. the original SIDA code (p=0.0)
-    3. AdamW weight_decay=0.01 — decoupled L2 regularisation
-    4. CosineAnnealingLR       — smooth LR decay, T_max=25
-    5. Early stopping          — patience=7 epochs; best weights are restored
+Стратегия регуляризации :
+    1. Заморозка базового энкодера  — 99.886% параметров не обновляются
+    2. Dropout(p=0.1)               — добавлен в отличие от оригинального кода SIDA (p=0.0)
+    3. AdamW weight_decay=0.01      — разделённая L2-регуляризация
+    4. CosineAnnealingLR            — плавное затухание скорости обучения, T_max=25
+    5. Ранняя остановка             — patience=7 эпох; восстанавливаются лучшие веса
 
-Dataset layout (--train-dir / --test-dir):
+Структура датасета (--train-dir / --test-dir):
     photo/train/{real, full_synt, tempered}/
     photo/test/ {real, full_synt, tempered}/
 
-    Labels:  real=0, full_synt=1 (FAKE), tempered=2
+    Метки:  real=0, full_synt=1 (FAKE), tempered=2
 
-Results on the thesis dataset (1 000 train / 300 test, seed=42):
-    Best epoch : 11
-    Test Accuracy : 94.67%  (284/300)
-    Macro F1      : 0.946
-
-Usage
+Результаты на датасете ВКР (999 обуч. / 300 тест., seed=42):
+    Лучшая эпоха       : 11
+    Точность на тесте  : 94.67%  (284/300)
+    Макро F1-мера      : 0.946
+    
+Использование
 ─────
     conda activate sida_modern
     cd detection/
