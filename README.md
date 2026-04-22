@@ -160,15 +160,14 @@ python gen_zimage.py      # Z-Image      → dataset/full_synthetic/zimage/
 python gen_imagen4.py     # Imagen 4     → dataset/full_synthetic/imagen4/
 ```
 
-> Each script generates a test image first and asks for confirmation
-> before running the full batch.
+> Каждый скрипт сначала генерирует пробную фотографию, требуется ответить да/нет для продолжения
 
 ### Частично - синтетические изображения
 
 ```bash
 cd dataset_generation/tempered
 
-# Source: your real photographs must be in dataset/real/
+# Подлинные фото должны находиться в  dataset/real/
 python gen_nano_banana.py    # → dataset/tempered/nano_banana/
 python gen_flux2pro_edit.py  # → dataset/tempered/flux2pro_edit/
 ```
