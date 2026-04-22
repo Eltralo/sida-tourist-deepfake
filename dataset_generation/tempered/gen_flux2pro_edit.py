@@ -2,21 +2,33 @@
 """
 dataset_generation/tempered/gen_flux2pro_edit.py
 ─────────────────────────────────────────────────
-Generates partially synthetic (tempered) tourist photographs via the ruGPT.io API.
-Method : image-to-image background replacement at 2K resolution
-         A real photograph of a person is uploaded; Flux 2 Pro (edit mode) replaces
-         only the background with a Russian landmark while keeping the foreground
-         person completely unchanged.
-Model  : flux-2/pro  (Black Forest Labs, 32B parameters) in image-editing mode
-Output : dataset/tempered/flux2pro_edit/
-Total generated for the thesis dataset: 192 images
+Генерация частично синтетических (tempered) туристических фотографий
+через API ruGPT.io.
 
-Usage
-─────
-    export RUGPT_API_KEY="your_key_here"
+Метод    : image-to-image, замена фона в разрешении 2K
+           На вход подаётся реальная фотография человека, Flux 2 Pro
+           (режим редактирования) заменяет только задний план на российский
+           туристический объект, сохраняя передний план (человека) без
+           изменений.
+Модель   : flux-2/pro (Black Forest Labs, 32B параметров) в режиме редактирования
+Выход    : dataset/tempered/flux2pro_edit/
+Всего сгенерировано для датасета диссертации: 192 изображения
+
+Запуск
+──────
+    export RUGPT_API_KEY="ваш_ключ"
     python gen_flux2pro_edit.py
 
-    python gen_flux2pro_edit.py --num 50 --real-dir /path/to/real --output /path/to/output
+    # С параметрами:
+    python gen_flux2pro_edit.py --num 50 --real-dir /путь/к/real --output /путь/к/output
+
+Параметры командной строки
+──────────────────────────
+    --num       Количество генерируемых изображений (по умолчанию: 192)
+    --real-dir  Директория с исходными реальными фотографиями
+    --output    Директория для сохранения результатов
+    --seed      Зерно случайности для воспроизводимости (по умолчанию: 4031)
+    --yes       Пропустить подтверждение и начать генерацию сразу
 """
 
 import argparse
@@ -35,16 +47,20 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(levelname)-8s  %(
                     datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
+# ── Параметры по умолчанию ────────────────────────────────────────────────────
 MODEL          = "flux-2/pro"
 ASPECT_RATIO   = "3:2"
 RESOLUTION     = "2K"
 ENHANCE_PROMPT = False
 DEFAULT_SEED   = 4031
-DEFAULT_N      = 192
+DEFAULT_N      = 192  # количество, сгенерированное для диссертации
 DEFAULT_REAL   = Path(__file__).parent.parent.parent / "dataset" / "real"
 DEFAULT_OUTPUT = Path(__file__).parent.parent.parent / "dataset" / "tempered" / "flux2pro_edit"
 IMG_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
+# ── Промпты замены фона ───────────────────────────────────────────────────────
+# Каждый промпт начинается с инструкции сохранить передний план (человека)
+# без изменений, а изменить только фон за спиной.
 _PRESERVE_PERSON = (
     "Keep the person in the foreground completely unchanged — "
     "do not alter their face, hair, clothing, pose, or any body part. "
@@ -80,20 +96,40 @@ BACKGROUNDS = [
 ]
 
 
-def collect_real_photos(real_dir: Path) -> list[Path]:
+def collect_real_photos(real_dir: Path) -> list:
+    """Собирает все графические файлы из директории *real_dir*.
+
+    Параметры
+    ─────────
+    real_dir : Path
+        Директория с реальными фотографиями.
+
+    Возвращает
+    ──────────
+    Список путей к найденным изображениям.
+
+    Исключения
+    ──────────
+    FileNotFoundError
+        Если директория пуста или не существует.
+    """
     photos = [f for f in real_dir.iterdir() if f.suffix.lower() in IMG_EXTENSIONS]
     if not photos:
-        raise FileNotFoundError(f"No images found in {real_dir}.")
-    log.info("  Found %d real photos in %s", len(photos), real_dir)
+        raise FileNotFoundError(
+            f"В директории {real_dir} не найдено ни одного изображения.\n"
+            "Укажите путь к реальным фотографиям через --real-dir."
+        )
+    log.info("  Найдено %d реальных фото в %s", len(photos), real_dir)
     return photos
 
 
 def save_log(combos: list, log_path: Path) -> None:
+    """Сохраняет журнал генерации в формате JSON."""
     data = {
         "metadata": {
             "model": MODEL,
             "resolution": RESOLUTION,
-            "method": "image-to-image background replacement",
+            "method": "image-to-image замена фона",
             "class": "tempered",
             "total_generated": sum(1 for c in combos if c.get("filename")),
             "total_planned": len(combos),
@@ -102,17 +138,24 @@ def save_log(combos: list, log_path: Path) -> None:
         "images": combos,
     }
     log_path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-    log.info("Log saved → %s", log_path)
+    log.info("Журнал сохранён → %s", log_path)
 
 
 def parse_args():
+    """Разбор параметров командной строки."""
     p = argparse.ArgumentParser(
-        description="Generate tempered images (background replacement) via Flux 2 Pro edit mode.")
-    p.add_argument("--num",      type=int,  default=DEFAULT_N,       help="Number of images to generate")
-    p.add_argument("--real-dir", type=Path, default=DEFAULT_REAL,    help="Directory with real source photos")
-    p.add_argument("--output",   type=Path, default=DEFAULT_OUTPUT,   help="Output directory")
-    p.add_argument("--seed",     type=int,  default=DEFAULT_SEED,     help="Random seed")
-    p.add_argument("--yes",      action="store_true",                 help="Skip confirmation prompt")
+        description="Генерация tempered-изображений (замена фона) через Flux 2 Pro edit."
+    )
+    p.add_argument("--num",      type=int,  default=DEFAULT_N,
+                   help="Количество генерируемых изображений")
+    p.add_argument("--real-dir", type=Path, default=DEFAULT_REAL,
+                   help="Директория с исходными реальными фотографиями")
+    p.add_argument("--output",   type=Path, default=DEFAULT_OUTPUT,
+                   help="Директория для сохранения результатов")
+    p.add_argument("--seed",     type=int,  default=DEFAULT_SEED,
+                   help="Зерно случайности")
+    p.add_argument("--yes",      action="store_true",
+                   help="Пропустить подтверждение")
     return p.parse_args()
 
 
@@ -125,6 +168,7 @@ def main():
 
     all_photos = collect_real_photos(args.real_dir)
 
+    # Циклы фотографий и фонов (перемешиваем и повторяем до нужного количества)
     photo_cycle = []
     while len(photo_cycle) < args.num:
         batch = all_photos[:]
@@ -145,26 +189,35 @@ def main():
     ]
 
     log.info("=" * 60)
-    log.info("  Flux 2 Pro edit (tempered) — %d images  |  output: %s", args.num, args.output)
+    log.info("  Flux 2 Pro edit (tempered) — %d изображений  |  выход: %s", args.num, args.output)
     log.info("=" * 60)
 
-    # Test first image
+    # ── Тестовая генерация первого изображения ──
+    log.info("ТЕСТ: генерация первого изображения для проверки качества и стоимости...")
     test = combos[0]
+    log.info("  Исходное фото: %s", Path(test["source_photo"]).name)
+
     file_uuid = upload_file(Path(test["source_photo"]), api_key)
     if not file_uuid:
-        log.error("Upload failed. Exiting."); return
+        log.error("Не удалось загрузить файл. Выход.")
+        return
 
-    job_uuid, _ = submit_img2img(test["background_prompt"], file_uuid, api_key, MODEL,
-                                  ASPECT_RATIO, RESOLUTION, ENHANCE_PROMPT)
+    job_uuid, _ = submit_img2img(
+        test["background_prompt"], file_uuid, api_key, MODEL,
+        ASPECT_RATIO, RESOLUTION, ENHANCE_PROMPT,
+    )
     if not job_uuid:
-        log.error("Cannot submit. Exiting."); return
+        log.error("Не удалось отправить задачу. Выход.")
+        return
 
     result = poll_result(job_uuid, api_key)
     if result["status"] != "completed":
-        log.error("Test failed: %s", result); return
+        log.error("Тест провален: %s", result)
+        return
 
     test_price = result.get("price") or 0
-    log.info("  Price: %d coins | Estimated total: %d coins", test_price, test_price * args.num)
+    log.info("  Цена: %d монет | Ориентировочно всего: %d монет", test_price, test_price * args.num)
+
     urls = result.get("urls") or []
     if isinstance(urls, str):
         urls = [urls]
@@ -172,40 +225,49 @@ def main():
         fn = f"flux_edit_{test['index']:04d}.png"
         sz = download_image(urls[0], args.output / fn)
         test.update({"filename": fn, "price": test_price, "job_uuid": job_uuid, "status": "completed"})
-        log.info("  Saved: %s  (%d KB)", fn, sz // 1024)
+        log.info("  Сохранено: %s  (%d КБ)", fn, sz // 1024)
     save_log(combos, log_path)
 
     if not args.yes:
-        answer = input(f"\nContinue generating remaining {len(combos) - 1} images? [y/N] ").strip().lower()
+        answer = input(f"\nПродолжить генерацию оставшихся {len(combos) - 1} изображений? [y/N] ").strip().lower()
         if answer != "y":
-            log.info("Aborted."); return
+            log.info("Прервано пользователем.")
+            return
 
+    # ── Основная генерация ──
     total_cost = test_price
     for combo in combos[1:]:
         idx = combo["index"]
-        log.info("[%3d/%d]  %s | bg: %s...",
+        log.info("[%3d/%d]  %s | фон: %s...",
                  idx + 1, args.num,
                  Path(combo["source_photo"]).name,
                  combo["background_prompt"][len(_PRESERVE_PERSON):60])
 
         file_uuid = upload_file(Path(combo["source_photo"]), api_key)
         if not file_uuid:
-            combo["status"] = "upload_failed"; continue
+            combo["status"] = "upload_failed"
+            continue
         combo["file_uuid"] = file_uuid
 
-        job_uuid, _ = submit_img2img(combo["background_prompt"], file_uuid, api_key, MODEL,
-                                      ASPECT_RATIO, RESOLUTION, ENHANCE_PROMPT)
+        job_uuid, _ = submit_img2img(
+            combo["background_prompt"], file_uuid, api_key, MODEL,
+            ASPECT_RATIO, RESOLUTION, ENHANCE_PROMPT,
+        )
         if not job_uuid:
-            combo["status"] = "submit_failed"; continue
+            combo["status"] = "submit_failed"
+            continue
 
         result = poll_result(job_uuid, api_key)
         combo["job_uuid"] = job_uuid
         if result["status"] != "completed":
-            combo.update({"status": result["status"], "error": result.get("error", "")}); continue
+            combo.update({"status": result["status"], "error": result.get("error", "")})
+            log.warning("  ОШИБКА: %s", result.get("error", result["status"]))
+            continue
 
         price = result.get("price") or 0
         total_cost += price
         combo["price"] = price
+
         urls = result.get("urls") or []
         if isinstance(urls, str):
             urls = [urls]
@@ -213,14 +275,14 @@ def main():
             fn = f"flux_edit_{idx:04d}.png"
             sz = download_image(urls[0], args.output / fn)
             combo.update({"filename": fn, "status": "completed"})
-            log.info("  OK  %s  (%d KB)  cost:%d  total:%d", fn, sz // 1024, price, total_cost)
+            log.info("  ОК  %s  (%d КБ)  цена:%d  всего:%d", fn, sz // 1024, price, total_cost)
         else:
             combo["status"] = "no_urls"
         save_log(combos, log_path)
         time.sleep(1)
 
     success = sum(1 for c in combos if c.get("filename"))
-    log.info("DONE  %d/%d  |  total cost: %d coins", success, args.num, total_cost)
+    log.info("ГОТОВО  %d/%d  |  суммарная стоимость: %d монет", success, args.num, total_cost)
     save_log(combos, log_path)
 
 
