@@ -281,4 +281,4 @@ Results are saved to `results_final/`:
 
 Базовая модель SIDA-7B: официальный гитхаб [original repository](https://github.com/Peterande/SIDA)
 
-Dataset images: не выключены в репозиторий.
+Dataset images: не выключены в репозиторий
