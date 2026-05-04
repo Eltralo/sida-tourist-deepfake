@@ -38,11 +38,11 @@ import time
 from datetime import datetime
 from pathlib import Path
  
-# Allow imports from the parent package (dataset_generation/)
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from _api_client import get_api_key, submit_text2img, poll_result, download_image
  
-# ── Logging ───────────────────────────────────────────────────────────────────
+# ── Загрузка ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s  %(levelname)-8s  %(message)s",
@@ -50,7 +50,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
  
-# ── Generation defaults ───────────────────────────────────────────────────────
+# ── Исходные настройки ───────────────────────────────────────────────────────
 MODEL          = "imagen-4.0-generate-001"
 ASPECT_RATIO   = "4:3"
 ENHANCE_PROMPT = False
