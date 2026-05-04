@@ -81,34 +81,46 @@
 
 ## Структура репозитория
 
-```
-sida-tourist-deepfake/
+`ida-tourist-deepfake/
 │
 ├── dataset_generation/          # Создание датасета
-│   ├── _api_client.py           # ruGPT.io API 
-│   ├── split_dataset.py         # Разделение на тренировочный и валидационный набор данных (seed=42, 999/300)
+│   ├── _api_client.py           # ruGPT.io API
+│   ├── split_dataset.py         # Разделение на train/test (seed=42, 999/300)
 │   ├── full_synthetic/
-│   │   ├── gen_flux2pro.py      # Flux 2 Pro  — 152 изображений
+│   │   ├── gen_flux2pro.py      # Flux 2 Pro   — 152 изображений
 │   │   ├── gen_seedream45.py    # Seedream 4.5 — 123 изображений
 │   │   ├── gen_zimage.py        # Z-Image      — 122 изображений
 │   │   └── gen_imagen4.py       # Imagen 4     —  31 изображений
 │   └── tempered/
-│       ├── gen_nano_banana.py   # Nano Banana (замена фона) — 241 изображений
+│       ├── gen_nano_banana.py   # Nano Banana (замена фона)        — 241 изображений
 │       └── gen_flux2pro_edit.py # Flux 2 Pro edit (background replacement) — 192 изображения
 │
 ├── detection/
 │   ├── finetune.py              # Двухэтапный файнтюн (Этап 1: features, Этап 2: head)
-│   ├── inference.py             # Инференс SAM mask generation
+│   ├── inference.py             # Инференс с генерацией масок SAM
 │   ├── baseline_eval.py         # Базовое сравнение (базовая модель SIDA-7B)
 │   └── eval_metrics.py          # Метрики: accuracy, Macro F1, confusion matrix
 │
-├── ck/
-│   ├── cls_head_new.pth         # Fine-tuned classification head weights (33 MB)
-│   ├── sam_vit_h_4b8939.pth     # SAM ViT-H checkpoint (30 MB)
-│   └── SIDA-7B/                 #  Download separately (see Setup)
+├── streamlit_app/               # Демо-приложение для презентации модели
+│   ├── app.py                   # Streamlit-приложение 
+│   ├── sida_inference.py        # Адаптер инференса SIDA-7B + cls_head
+│   ├── metrics.py               # Расчёт метрик качества с GT
+│   ├── requirements.txt         # Доп. зависимости поверх основной venv
+│   └── README.md                # Инструкция по запуску приложения
 │
-├── model/                       # авторская архитектура SIDA
-├── utils/                       # функции от авторов модели SIDA
+├── results_final/               # Результаты инференса
+│   ├── report.txt               # Текстовый отчёт с итоговыми метриками
+│   ├── results.json             # Предсказания по каждому изображению
+│   ├── masks/                   # Бинарные маски для класса TAMPERED
+│   └── overlays/                # Оригиналы с наложенными масками подделок
+│
+├── ck/
+│   ├── cls_head_new.pth         # Дообученная классификационная голова (33 MB)
+│   ├── sam_vit_h_4b8939.pth     # SAM ViT-H checkpoint (30 MB)
+│   └── SIDA-7B/                 # Скачивается отдельно (см. раздел «Установка»)
+│
+├── model/                       # Авторская архитектура SIDA
+├── utils/                       # Функции от авторов модели SIDA
 │
 ├── environment.yml              # Conda среда (Python 3.10, CUDA 12.6)
 ├── requirements.txt             # pip зависимости
