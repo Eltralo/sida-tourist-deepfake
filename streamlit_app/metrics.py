@@ -2,13 +2,7 @@
 """
 streamlit_app/metrics.py
 ─────────────────────────
-Расчёт метрик качества для Streamlit-приложения.
-
-Логика соответствует ``detection/eval_metrics.py``: те же три класса,
-та же нормализация меток, те же формулы Precision / Recall / F1. Отличие
-в том, что здесь метрики считаются прямо в памяти (не из results.json),
-а на вход подаются два списка y_true / y_pred либо DataFrame с колонками
-``predicted`` и ``gt``.
+Расчёт метрик качества для демонстрации в Streamlit-приложении.
 
 Дополнительно поддерживается извлечение истинной метки из имени папки —
 структура каталогов в проекте: ``photo/test/{real, full_synt, tempered}/``.
@@ -50,8 +44,6 @@ FOLDER_TO_LABEL = {
 
 def normalise_label(label: str) -> str:
     """Нормализация строковых меток к канонической форме SIDA.
-
-    Совпадает с одноимённой функцией из ``detection/eval_metrics.py``.
     """
     t = str(label).lower().strip()
     if t in ("fake", "full_synt", "full_synthetic", "synthetic", "fully synthetic"):
@@ -64,9 +56,8 @@ def normalise_label(label: str) -> str:
 
 
 def infer_label_from_filename(name: str) -> Optional[str]:
-    """Извлекает истинный класс из пути к файлу.
-
-    Работает, если файл лежит в подпапке real/, full_synt/ или tempered/.
+    """Извлечение истинного класса из пути к файлу.
+    Необходимо нахождение  в подпапке real/, full_synt/ или tempered/.
     Возвращает None, если ничего не подошло.
     """
     n = str(name).lower().replace("\\", "/")
@@ -87,8 +78,7 @@ def infer_label_from_filename(name: str) -> Optional[str]:
 
 
 def load_gt(source) -> dict:
-    """Загружает GT-метки из CSV / DataFrame / dict.
-
+    """Загрузка GT-метки из CSV / DataFrame / dict.
     CSV должен содержать колонки filename (или path/file/name) и
     label (или class/gt/y/true).
     """
