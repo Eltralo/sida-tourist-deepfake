@@ -114,7 +114,7 @@ sida-tourist-deepfake/
 └── .gitignore
 ```
 
-> **Streamlit demo** 
+> **Streamlit demo**[https://github.com/Eltralo/sida-tourist-deepfake/tree/main/streamlit_app]
 
 ---
 
