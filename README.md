@@ -81,7 +81,8 @@
 
 ## Структура репозитория
 
-`ida-tourist-deepfake/
+```
+sida-tourist-deepfake/
 │
 ├── dataset_generation/          # Создание датасета
 │   ├── _api_client.py           # ruGPT.io API
@@ -102,10 +103,10 @@
 │   └── eval_metrics.py          # Метрики: accuracy, Macro F1, confusion matrix
 │
 ├── streamlit_app/               # Демо-приложение для презентации модели
-│   ├── app.py                   # Streamlit-приложение 
+│   ├── app.py                   # Главное Streamlit-приложение (UI, табы, графики)
 │   ├── sida_inference.py        # Адаптер инференса SIDA-7B + cls_head
 │   ├── metrics.py               # Расчёт метрик качества с GT
-│   ├── requirements.txt         # Доп. зависимости поверх основной venv
+│   ├── requirements.txt         # Доп. зависимости поверх sida_modern
 │   └── README.md                # Инструкция по запуску приложения
 │
 ├── results_final/               # Результаты инференса
