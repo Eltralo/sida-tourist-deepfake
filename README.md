@@ -88,13 +88,13 @@ sida-tourist-deepfake/
 │   ├── _api_client.py           # ruGPT.io API
 │   ├── split_dataset.py         # Разделение на train/test (seed=42, 999/300)
 │   ├── full_synthetic/
-│   │   ├── gen_flux2pro.py      # Flux 2 Pro   — 152 изображений
-│   │   ├── gen_seedream45.py    # Seedream 4.5 — 123 изображений
-│   │   ├── gen_zimage.py        # Z-Image      — 122 изображений
-│   │   └── gen_imagen4.py       # Imagen 4     —  31 изображений
+│   │   ├── gen_flux2pro.py      # Flux 2 Pro -152 изображений
+│   │   ├── gen_seedream45.py    # Seedream 4.5 -123 изображений
+│   │   ├── gen_zimage.py        # Z-Image -122 изображений
+│   │   └── gen_imagen4.py       # Imagen 4 -31 изображений
 │   └── tempered/
-│       ├── gen_nano_banana.py   # Nano Banana (замена фона)        — 241 изображений
-│       └── gen_flux2pro_edit.py # Flux 2 Pro edit (background replacement) — 192 изображения
+│       ├── gen_nano_banana.py   # Nano Banana (замена фона) -241 изображений
+│       └── gen_flux2pro_edit.py # Flux 2 Pro edit (background replacement)- 192 изображения
 │
 ├── detection/
 │   ├── finetune.py              # Двухэтапный файнтюн (Этап 1: features, Этап 2: head)
@@ -103,7 +103,7 @@ sida-tourist-deepfake/
 │   └── eval_metrics.py          # Метрики: accuracy, Macro F1, confusion matrix
 │
 ├── streamlit_app/               # Демо-приложение для презентации модели
-│   ├── app.py                   # Главное Streamlit-приложение (UI, табы, графики)
+│   ├── app.py                   # Streamlit-приложение 
 │   ├── sida_inference.py        # Адаптер инференса SIDA-7B + cls_head
 │   ├── metrics.py               # Расчёт метрик качества с GT
 │   ├── requirements.txt         # Доп. зависимости поверх sida_modern
@@ -113,7 +113,7 @@ sida-tourist-deepfake/
 │   ├── report.txt               # Текстовый отчёт с итоговыми метриками
 │   ├── results.json             # Предсказания по каждому изображению
 │   ├── masks/                   # Бинарные маски для класса TAMPERED
-│   └── overlays/                # Оригиналы с наложенными масками подделок
+│   └── overlays/                # Оригиналы с наложенными масками фальсификации
 │
 ├── ck/
 │   ├── cls_head_new.pth         # Дообученная классификационная голова (33 MB)
