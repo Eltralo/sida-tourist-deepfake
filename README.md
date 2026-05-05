@@ -282,8 +282,7 @@ pip install -r streamlit_app/requirements.txt
 streamlit run streamlit_app/app.py
 ```
 
-Приложение откроется на `http://localhost:8501`. Дизайн рассчитан на
-демонстрацию с ноутбука 1440×900.
+Приложение откроется на `http://localhost:8501`.
 
 Подробнее — в [streamlit_app/README.md](streamlit_app/README.md).
 
